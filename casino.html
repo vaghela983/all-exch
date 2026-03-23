@@ -214,29 +214,97 @@
     <div class="dashboard-content-wrap">
       <!-- Casino Section -->
       <div id="casino-container" class="event-section-wrap" style="background: white;">
-        <div class="event-header"
-          style="text-align: center; background: #fff; color: #00695c; font-weight: 800; font-size: 14px; border-bottom: 2px solid #eee;">
-          ALL CASINO</div>
 
-        <div class="casino-nav" style="border-bottom: 1px solid #ddd;">
-          <div
-            style="display: flex; flex-wrap: wrap; text-align: center; justify-content: space-between; font-size: 9px; font-weight: bold; color: #555;">
-            <div style="flex: 1; min-width: 60px; background: #00796b; color: white; padding: 5px;">AURA</div>
-            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">MAC88 GAMING</div>
-            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">MAC EXCITE</div>
-            <div style="flex: 1; min-width: 50px; padding: 5px; border-right: 1px solid #ddd;">MAC88</div>
-            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">FUN GAMES</div>
-            <div style="flex: 1; min-width: 80px; padding: 5px; border-right: 1px solid #ddd;">EVOLUTION GAMING</div>
-            <div style="flex: 1; min-width: 50px; padding: 5px; border-right: 1px solid #ddd;">EZUGI</div>
-            <div style="flex: 1; min-width: 50px; padding: 5px; border-right: 1px solid #ddd;">SPRIBE</div>
-            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">JILI GAMING</div>
-            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">TURBO GAMES</div>
-            <div style="flex: 1; min-width: 60px; padding: 5px;">SEXYBCRT</div>
+
+        <style>
+          .casino-nav-container {
+            background: #f4f6f5;
+            padding: 4px;
+          }
+
+          .casino-nav-row {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            border: 1px solid #005a5a;
+            background: #eff3f2;
+            margin-bottom: 4px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+
+          .casino-nav-row::-webkit-scrollbar {
+            display: none;
+          }
+
+          .casino-nav-item {
+            padding: 8px 12px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 500;
+            border-right: 1px solid #005a5a;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          .casino-nav-item.active {
+            background: #005a5a;
+            color: white;
+          }
+
+          .casino-nav-item:last-child {
+            border-right: none;
+          }
+
+          .casino-sub-nav {
+            display: flex;
+            border: 1px solid #005a5a;
+            background: #eff3f2;
+          }
+
+          .casino-sub-item {
+            flex: 1;
+            padding: 6px;
+            color: #333;
+            font-size: 11px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            border-right: 1px solid #005a5a;
+          }
+
+          .casino-sub-item.active {
+            background: #005a5a;
+            color: white;
+          }
+
+          .casino-sub-item:last-child {
+            border-right: none;
+          }
+        </style>
+
+        <div class="casino-nav-container">
+          <div class="casino-nav-row">
+            <div class="casino-nav-item active">Aura</div>
+            <div class="casino-nav-item">mac88 gaming</div>
+            <div class="casino-nav-item">mac excite</div>
+            <div class="casino-nav-item">mac88</div>
+            <div class="casino-nav-item">fun games</div>
+            <div class="casino-nav-item">evolution gaming</div>
+            <div class="casino-nav-item">ezugi</div>
+            <div class="casino-nav-item">spribe</div>
+            <div class="casino-nav-item">jili gaming</div>
+            <div class="casino-nav-item">turbo games</div>
+            <div class="casino-nav-item">sexybcrt</div>
+            <div class="casino-nav-item">DC</div>
+            <div class="casino-nav-item">games global</div>
+            <div class="casino-nav-item">pragmatic play</div>
+            <div class="casino-nav-item">wazdan</div>
           </div>
-          <div
-            style="display: flex; text-align: center; font-size: 9px; font-weight: bold; color: #555; border-top: 1px solid #ddd;">
-            <div style="flex: 1; background: #00796b; color: white; padding: 3px;">ALL</div>
-            <div style="flex: 1; padding: 3px; background: #eee;">CARD_GAME</div>
+          <div class="casino-sub-nav">
+            <div class="casino-sub-item active">ALL</div>
+            <div class="casino-sub-item">CARD_GAME</div>
           </div>
         </div>
 
