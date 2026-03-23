@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="Allexchbet - Fantasy Cricket & More Games"
+    />
+    <meta name="author" content="Allexchbet" />
+    <title>Welcome to allexchbet.com</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Main CSS File -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body
+    data-aos-easing="ease-in-out"
+    data-aos-duration="1000"
+    data-aos-delay="0"
+  >
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="Assets/Logo/logo-text.png" alt="Logo" />
+        </a>
+        <a
+          class="getstartedMo"
+          href="#"
+          data-bs-toggle="modal"
+          data-bs-target="#LoginModal"
+          >Login</a
+        >
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Cricket</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Tennis</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Football</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Casnio</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Soccer</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Live Casino</a
+              >
+            </li>
+            <li>
+              <a
+                class="getstarted"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#LoginModal"
+                >Login</a
+              >
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="modal fade lgmDesign"
+      id="LoginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="user_card">
+              <div class="d-flex justify-content-center mb-4">
+                <img
+                  src="Assets/Logo/logo-text.png"
+                  style="width: 200px"
+                  alt="Logo"
+                />
+              </div>
+              <div class="d-flex justify-content-center form_container">
+                <form id="login-form">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      name="username"
+                      id="username"
+                      class="form-control form-control-lg"
+                      placeholder="username"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control form-control-lg"
+                      placeholder="password"
+                      required
+                    />
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="remember_me"
+                      />
+                      <label class="custom-control-label" for="remember_me"
+                        >Remember me</label
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-center mt-3 login_container"
+                  >
+                    <button type="submit" class="btn login_btn" id="loginBtn">
+                      Login
+                    </button>
+                  </div>
+                  <div
+                    class="d-flex justify-content-center mt-3 login_container"
+                  >
+                    <button type="button" class="btn login_btn" id="demoLogin">
+                      Demo
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center main-banner">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-8">
+            <h1 data-aos="fade-up">Fantasy Cricket &amp; More Games</h1>
+            <h2 class="d-none" data-aos="fade-up" data-aos-delay="400">
+              Lets Start Your Winning Games
+            </h2>
+          </div>
+          <div
+            class="col-lg-4 hero-img"
+            data-aos="zoom-out"
+            data-aos-delay="200"
+          >
+            <img
+              src="Assets/Login Page/newMockup.png"
+              class="img-fluid"
+              alt="Phone Mockup"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="middle-section">
+      <!-- ======= Values Section ======= -->
+      <section id="values" class="values">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Our Sports</h2>
+            <p>Welcome to Sport Exchange</p>
+          </header>
+          <div class="row">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="box">
+                <img
+                  src="Assets/Login%20Page/cricket.png"
+                  class="img-fluid"
+                  alt="Cricket"
+                />
+                <h3>Cricket</h3>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 mt-4 mt-lg-0"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="box">
+                <img
+                  src="Assets/Login%20Page/football.png"
+                  class="img-fluid"
+                  alt="Soccer"
+                />
+                <h3>Soccer</h3>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 mt-4 mt-lg-0"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="box">
+                <img
+                  src="Assets/Login%20Page/tennis.png"
+                  class="img-fluid"
+                  alt="Tennis"
+                />
+                <h3>Tennis</h3>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 mt-4 mt-lg-0"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
+              <div class="box">
+                <img
+                  src="Assets/Login%20Page/casino-live.png"
+                  class="img-fluid"
+                  alt="Live Casino"
+                />
+                <h3>Live Casino</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- features -->
+      <div class="features features-bg">
+        <div class="container">
+          <h2 class="ktitle">The Most Trusted Site</h2>
+          <div class="main_featurebox">
+            <div class="feature_box 1fbox">
+              <img
+                class="assured"
+                src="Assets/Login%20Page/safe.png"
+                alt="Safe"
+              />
+              <h4 class="feat1">Safe &amp; Secure</h4>
+            </div>
+            <div class="feature_box 2fbox mgtop">
+              <img
+                class="fturimg2"
+                src="Assets/Login%20Page/24-hours.png"
+                alt="24x7"
+              />
+              <h4 class="feat2">24x7 Service</h4>
+            </div>
+            <div class="feature_box 3fbox">
+              <img
+                class="fturimg3"
+                src="Assets/Login%20Page/smartphone.png"
+                alt="Mobile"
+              />
+              <h4 class="feat3">Play on Mobile</h4>
+            </div>
+            <div class="feature_box 4fbox mgtop">
+              <img
+                class="fturimg4"
+                src="Assets/Login%20Page/pay.png"
+                alt="Cash"
+              />
+              <h4 class="feat4">Win Real Cash</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= Testimonials Section ======= -->
+      <section class="testimonials">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Live Casino</h2>
+            <p>Our Casinos</p>
+          </header>
+          <div
+            class="testimonials-slider swiper live-casino-slider"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Games/5.jpg"
+                    class="testimonial-img"
+                    alt="Dragon Tiger"
+                  />
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Games/6.jpg"
+                    class="testimonial-img"
+                    alt="Poker"
+                  />
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Games/1.jpg"
+                    class="testimonial-img"
+                    alt="7 Up & Down"
+                  />
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Games/2.jpg"
+                    class="testimonial-img"
+                    alt="32 Cards Casino"
+                  />
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Games/3.jpg"
+                    class="testimonial-img"
+                    alt="Amar Akbar Anthony"
+                  />
+                </div>
+              </div>
+              <!-- End testimonial item -->
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Games/4.jpg"
+                    class="testimonial-img"
+                    alt="Andar Bahar"
+                  />
+                </div>
+              </div>
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======= International Casino ======= -->
+      <section class="best-casinos">
+        <div class="container-fluid" data-aos="fade-up">
+          <header class="section-header">
+            <h2>International Casino</h2>
+            <p>Casino Game in Our Exchange</p>
+          </header>
+          <div class="row hover15">
+            <div class="col-md-4 col-6">
+              <figure>
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Casinos/1.jpg"
+                /></a>
+              </figure>
+            </div>
+            <div class="col-md-4 col-6">
+              <figure>
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Casinos/2.jpg"
+                /></a>
+              </figure>
+            </div>
+            <div class="col-md-4 col-6">
+              <figure>
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Casinos/3.jpg"
+                /></a>
+              </figure>
+            </div>
+            <div class="col-md-4 col-6">
+              <figure>
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Casinos/4.jpg"
+                /></a>
+              </figure>
+            </div>
+            <div class="col-md-4 col-6">
+              <figure>
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Casinos/5.jpg"
+                /></a>
+              </figure>
+            </div>
+            <div class="col-md-4 col-6">
+              <figure>
+                <a href="#"
+                  ><img
+                    class="img-fluid"
+                    src="Assets/Login%20Page/Login%20Page%20Other%20Assets/Casinos/6.jpg"
+                /></a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- our-providers -->
+      <div class="partner-section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Trending and delightful casino partners...</h2>
+            <p>Our Providers</p>
+          </header>
+          <div
+            class="clients-slider swiper"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr1.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr2.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr3.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr4.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr5.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr6.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr7.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr9.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr10.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="our-providers">
+                  <img src="Assets/Login%20Page/Casino/pvr11.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="copyright">
+          © Copyright <strong>allexchbet.com</strong>. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Main JS File -->
+    <script src="script.js"></script>
+  </body>
+</html>

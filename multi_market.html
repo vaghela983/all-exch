@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Market - Allexchbet</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="deshboard.css">
+    <link rel="stylesheet" href="multi_market.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+        <header style="background: white; border-bottom: 2px solid #ccc;">
+      <!-- Row 1: Balances & Hamburger -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
+          <div style="display: flex; align-items: center;">
+             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
+                 <i class="material-icons">menu</i>
+             </a>
+             <div>BL : <span style="color: #4caf50;">5000</span></div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
+      </div>
+      <!-- Row 2: Central Logo -->
+      <div style="text-align: center; padding: 5px 0;">
+          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
+      </div>
+      <!-- Row 3: Marquee -->
+      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
+          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
+              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+      <li class="logo-container center-align">
+        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+      </li>
+      <li>
+        <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" /> HOME</a>
+      </li>
+      <li>
+        <a href="multi_market.html" class="waves-effect waves-light active-nav"><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a>
+      </li>
+      <li>
+        <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">people</i> USERS LIST<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+                <li><a href="user_list.html?role=super_master">SUPER MASTER</a></li>
+                <li><a href="user_list.html?role=master">MASTER</a></li>
+                <li><a href="user_list.html?role=client">CLIENT</a></li>
+                <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">add_circle_outline</i> CREATE NEW<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+                <li><a href="create_user.html?role=new_master">NEW MASTER</a></li>
+                <li><a href="create_user.html?role=new_client">NEW CLIENT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/bets.svg" /> BETS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+                <li><a href="bets.html?status=casino_pending">CASINO1 PENDING</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="settlement.html" class="waves-effect waves-light"><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT -NEW</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
+                <li><a href="reports.html?type=ac_statement">A/C STATEMENT</a></li>
+                <li><a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a></li>
+                <li><a href="reports.html?type=chip_summery">CHIP SUMMERY</a></li>
+                <li><a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a></li>
+                <li><a href="reports.html?type=sport_summery">SPORT SUMMERY</a></li>
+                <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
+                <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
+                <li><a href="reports.html?type=balance_sheet">BALANCE SHEET</a></li>
+                <li><a href="reports.html?type=export">EXPORT</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a>
+      </li>
+      <li>
+        <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+      </li>
+      <li>
+        <a href="rules.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+      </li>
+      <li class="profile-bottom">
+        <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a>
+      </li>
+      <li>
+        <a href="change_password.html" class="waves-effect waves-light"><img src="Assets/Deshboard/edit.svg" /> CHANGE PASSWORD (KINGTEST)</a>
+      </li>
+      <li>
+        <a href="index.html" class="waves-effect waves-light logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+      </li>
+    </ul>
+
+    <main>
+        <div class="match-detail-wrap">
+            <div class="match-title">WARRIORS V KWAZULU NATAL INLAND</div>
+            
+            <div class="match-tabs">
+                <div class="match-tab active">
+                    <img src="Assets/Deshboard/profitloss.svg" alt="Market">
+                    MARKET
+                </div>
+                <div class="match-tab" style="border-top: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+                    <i class="material-icons" style="font-size: 24px;">live_tv</i>
+                    LIVE
+                </div>
+            </div>
+
+            <div class="scores-row">
+                <div>Warriors : <span class="score-green">0.00</span></div>
+                <div>Kwazulu Natal Inland : <span class="score-green">0.00</span></div>
+            </div>
+
+            <div class="detail-row">
+                <!-- LEFT COLUMN -->
+                <div class="detail-left">
+                    <div class="tracker-wrap">
+                        <img src="https://via.placeholder.com/800x200/4CAF50/FFFFFF?text=Stadium+Graphic" class="tracker-bg" alt="Tracker">
+                        <div class="tracker-overlay">
+                            <div>
+                                Warriors<br>
+                                0/0 (0.0)<br>
+                                CRR : 0 | RRR: 0.0
+                            </div>
+                            <div style="text-align: right;">
+                                Kwazulu Natal Inland<br>
+                                87/3 (22)<br>
+                                CRR : 3.95 | RRR: 0.0
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MATCH ODDS -->
+                    <div class="odds-section">
+                        <div class="odds-header">
+                            <i class="material-icons" style="font-size: 16px; margin-right: 5px;">star_border</i> MATCH ODDS
+                            <div class="orange-badge">B</div>
+                            <div class="orange-badge"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+                            <div class="orange-badge"><i class="material-icons" style="font-size: 12px;">stop</i></div>
+                            <div class="odds-header-right">
+                                <div class="odds-header-box bg-back" style="background: none; color: #72bbef; width: auto; margin-right: 25px;"><i class="material-icons" style="font-size: 14px;">info_outline</i></div>
+                                <div class="odds-header-box" style="background: transparent; color: white;">BACK</div>
+                                <div class="odds-header-box" style="background: transparent; color: white;">LAY</div>
+                            </div>
+                        </div>
+                        <div class="odds-row">
+                            <div class="runner-name">Warriors<br><div class="sub">-</div></div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-back">
+                                    <span class="main-odd">1.22</span>
+                                    <span class="sub-odd">44950</span>
+                                </div>
+                                <div class="odds-box box-lay">
+                                    <span class="main-odd">1.23</span>
+                                    <span class="sub-odd">431194</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="odds-row">
+                            <div class="runner-name">Kwazulu Natal Inland<br><div class="sub">-</div></div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-back">
+                                    <span class="main-odd">5.3</span>
+                                    <span class="sub-odd">100476</span>
+                                </div>
+                                <div class="odds-box box-lay">
+                                    <span class="main-odd">5.5</span>
+                                    <span class="sub-odd">9946</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOOKMAKER -->
+                    <div class="red-banner">IPL 2026 WINNER BOOKMAKER BETTING STARTED !</div>
+                    <div class="odds-section" style="margin-bottom: 0;">
+                        <div class="odds-header">
+                            <i class="material-icons" style="font-size: 16px; margin-right: 5px;">star_border</i> BOOKMAKER
+                            <div class="orange-badge">B</div>
+                            <div class="orange-badge"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+                            <div class="orange-badge"><i class="material-icons" style="font-size: 12px;">stop</i></div>
+                            <div class="odds-header-right">
+                                <div class="odds-header-box" style="background: none; color: #72bbef; width: auto; margin-right: 25px;"><i class="material-icons" style="font-size: 14px;">info_outline</i></div>
+                                <div class="odds-header-box" style="background: transparent; color: white;">BACK</div>
+                                <div class="odds-header-box" style="background: transparent; color: white;">LAY</div>
+                            </div>
+                        </div>
+                        <div class="odds-row">
+                            <div class="runner-name">Warriors<br><div class="sub">-</div></div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-back">
+                                    <span class="main-odd">21</span>
+                                    <span class="sub-odd">100000</span>
+                                </div>
+                                <div class="odds-box box-suspended" style="position: relative;">
+                                    <div class="suspended-text-overlay" style="background: none; color: #fff;">SUSPENDED</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="odds-row">
+                            <div class="runner-name">Kwazulu Natal Inland<br><div class="sub">-</div></div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-back">
+                                    <span class="main-odd">415</span>
+                                    <span class="sub-odd">100000</span>
+                                </div>
+                                <div class="odds-box box-suspended" style="position: relative;">
+                                    <div class="suspended-text-overlay" style="background: none; color: #fff;">SUSPENDED</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FANCY -->
+                    <div class="red-banner">T20 W - WI W v AUS W ADVANCE BETTING STARTED !</div>
+                    <div class="odds-section">
+                        <div class="fancy-header">
+                            <div>FANCY</div>
+                            <div style="display: flex;">
+                                <span style="width: 75px; text-align: center;">NO</span>
+                                <span style="width: 75px; text-align: center;">YES</span>
+                            </div>
+                        </div>
+                        
+                        <div class="odds-row">
+                            <div class="runner-name">
+                                <i class="material-icons" style="font-size: 14px; margin-right: 5px; color: #f5a623;">star_border</i>
+                                <div class="orange-badge" style="margin-right: 5px;">B</div>
+                                <div class="orange-badge" style="margin-right: 5px;"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+                                <span style="margin-left: 5px; font-weight: bold;">M Nofal <i class="material-icons" style="font-size: 14px;">dehaze</i></span>
+                                <i class="material-icons" style="margin-left: auto; color: #333;">info</i>
+                            </div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-suspended" style="position: relative;">
+                                    <span class="main-odd">57</span>
+                                    <span class="sub-odd">110</span>
+                                </div>
+                                <div class="odds-box box-suspended" style="position: relative;">
+                                    <div class="suspended-text-overlay" style="background: none; color: #fff;">BALL RUNNING</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="odds-row">
+                            <div class="runner-name">
+                                <i class="material-icons" style="font-size: 14px; margin-right: 5px; color: #f5a623;">star_border</i>
+                                <div class="orange-badge" style="margin-right: 5px;">B</div>
+                                <div class="orange-badge" style="margin-right: 5px;"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+                                <span style="margin-left: 5px; font-weight: bold;">30 Over KNI <i class="material-icons" style="font-size: 14px;">dehaze</i></span>
+                                <i class="material-icons" style="margin-left: auto; color: #333;">info</i>
+                            </div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-no">
+                                    <span class="main-odd">124</span>
+                                    <span class="sub-odd">110</span>
+                                </div>
+                                <div class="odds-box box-yes">
+                                    <span class="main-odd">124</span>
+                                    <span class="sub-odd">90</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="odds-row">
+                            <div class="runner-name">
+                                <i class="material-icons" style="font-size: 14px; margin-right: 5px; color: #f5a623;">star_border</i>
+                                <div class="orange-badge" style="margin-right: 5px;">B</div>
+                                <div class="orange-badge" style="margin-right: 5px;"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+                                <span style="margin-left: 5px; font-weight: bold;">Lambi KNI <i class="material-icons" style="font-size: 14px;">dehaze</i></span>
+                                <i class="material-icons" style="margin-left: auto; color: #333;">info</i>
+                            </div>
+                            <div class="odds-boxes-wrap">
+                                <div class="odds-box box-no">
+                                    <span class="main-odd">228</span>
+                                    <span class="sub-odd">100</span>
+                                </div>
+                                <div class="odds-box box-yes">
+                                    <span class="main-odd">230</span>
+                                    <span class="sub-odd">100</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="detail-right">
+                    <div class="search-bar-wrap">
+                        <input type="text" class="search-input" placeholder="Username">
+                        <button class="search-btn">SEARCH</button>
+                    </div>
+
+                    <div class="matched-tabs">
+                        <div class="m-tab active">MATCHED</div>
+                        <div class="m-tab">UN-MATCHED</div>
+                    </div>
+
+                    <table class="side-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Runner</th>
+                                <th>Rate</th>
+                                <th>Stake</th>
+                                <th>Profit/Loss</th>
+                                <th>Time/Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- empty -->
+                        </tbody>
+                    </table>
+
+                    <div class="table-title">Fancy Bet List</div>
+                    <table class="side-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Runner</th>
+                                <th>Run</th>
+                                <th>Stake</th>
+                                <th>Profit/Loss</th>
+                                <th>Time/Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- empty -->
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="deshboard.js"></script>
+</body>
+</html>

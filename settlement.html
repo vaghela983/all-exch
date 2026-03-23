@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settlement - Allexchbet</title>
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="deshboard.css" />
+    <style>
+      .settlement-table {
+        background: white;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+      .settlement-table thead {
+        background: var(--teal-primary);
+        color: white;
+      }
+      .settlement-table th,
+      .settlement-table td {
+        padding: 12px 15px !important;
+        border-right: 1px solid #eee;
+        text-align: center;
+      }
+      .match-column {
+        text-align: left !important;
+        font-weight: 500;
+        width: 40%;
+      }
+      .pnl-positive {
+        color: #4caf50;
+        font-weight: bold;
+      }
+      .pnl-negative {
+        color: #f44336;
+        font-weight: bold;
+      }
+      .action-btn {
+        background-color: var(--teal-primary) !important;
+        height: 28px !important;
+        line-height: 28px !important;
+        font-size: 11px !important;
+        padding: 0 10px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+        <header style="background: white; border-bottom: 2px solid #ccc;">
+      <!-- Row 1: Balances & Hamburger -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
+          <div style="display: flex; align-items: center;">
+             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
+                 <i class="material-icons">menu</i>
+             </a>
+             <div>BL : <span style="color: #4caf50;">5000</span></div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
+      </div>
+      <!-- Row 2: Central Logo -->
+      <div style="text-align: center; padding: 5px 0;">
+          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
+      </div>
+      <!-- Row 3: Marquee -->
+      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
+          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
+              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+      <li class="logo-container center-align">
+        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+      </li>
+      <li>
+        <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" /> HOME</a>
+      </li>
+      <li>
+        <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a>
+      </li>
+      <li>
+        <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">people</i> USERS LIST<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+                <li><a href="user_list.html?role=super_master">SUPER MASTER</a></li>
+                <li><a href="user_list.html?role=master">MASTER</a></li>
+                <li><a href="user_list.html?role=client">CLIENT</a></li>
+                <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">add_circle_outline</i> CREATE NEW<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+                <li><a href="create_user.html?role=new_master">NEW MASTER</a></li>
+                <li><a href="create_user.html?role=new_client">NEW CLIENT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect"><img src="Assets/Deshboard/bets.svg" /> BETS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+                <li><a href="bets.html?status=casino_pending">CASINO1 PENDING</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="settlement.html" class="waves-effect active-nav"><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT -NEW</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
+                <li><a href="reports.html?type=ac_statement">A/C STATEMENT</a></li>
+                <li><a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a></li>
+                <li><a href="reports.html?type=chip_summery">CHIP SUMMERY</a></li>
+                <li><a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a></li>
+                <li><a href="reports.html?type=sport_summery">SPORT SUMMERY</a></li>
+                <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
+                <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
+                <li><a href="reports.html?type=balance_sheet">BALANCE SHEET</a></li>
+                <li><a href="reports.html?type=export">EXPORT</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="download_apk.html" class="waves-effect"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a>
+      </li>
+      <li>
+        <a href="terms.html" class="waves-effect"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+      </li>
+      <li>
+        <a href="rules.html" class="waves-effect"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+      </li>
+      <li class="profile-bottom">
+        <a href="profile.html" class="waves-effect"><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a>
+      </li>
+    </ul>
+
+    <!-- Main Content -->
+    <main style="background-color: #f1f3f4; min-height: 100vh;">
+      <div
+        style="
+          background-color: white;
+          color: #0b4a4d;
+          padding: 15px;
+          text-align: center;
+          font-weight: 900;
+          font-size: 18px;
+          text-transform: uppercase;
+          border-bottom: 2px solid #eee;
+        "
+      >
+        SETTLEMENT(KINGTEST)
+      </div>
+
+      <div style="padding: 15px;">
+        <div style="background: transparent; margin-bottom: 20px; position: relative;">
+          <i class="material-icons" style="position: absolute; left: 0; top: 10px; color: #000; font-size: 24px;">search</i>
+          <input type="text" placeholder="Username" style="border: none; border-bottom: 1px solid #ccc; font-size: 14px; padding-left: 35px; width: calc(100% - 35px); background: transparent; box-shadow: none; outline: none; margin: 0; height: 40px;" />
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <!-- Left Table (Green) -->
+          <div style="flex: 1; min-width: 50%;">
+            <table class="bordered" style="background: #f8f8f8; font-size: 12px; border: 1px solid #ccc;">
+              <thead style="background: #00a82d; color: white;">
+                <tr>
+                  <th style="padding: 10px; width: 30px;">UT</th>
+                  <th style="padding: 10px; text-align: left;">USERNAME</th>
+                  <th style="padding: 10px; text-align: left;">CHIP</th>
+                  <th style="padding: 10px; text-align: left;">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid #ccc;">
+                  <td style="padding: 10px; text-align: center; font-size: 13px;">🎩</td>
+                  <td style="padding: 10px; font-weight: bold; color: #000;">Up-Line P/L</td>
+                  <td style="padding: 10px; font-weight: bold; color: #00a82d;">2.8</td>
+                  <td style="padding: 10px; color: #888;">-</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ccc;">
+                  <td style="padding: 10px; text-align: center; font-size: 13px;">🎩</td>
+                  <td style="padding: 10px; font-weight: bold; color: #000;">My Commission</td>
+                  <td style="padding: 10px; font-weight: bold; color: #00a82d;">0</td>
+                  <td style="padding: 10px; color: #888;">-</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ccc;">
+                  <td style="padding: 10px; text-align: center; font-size: 13px;">🎩</td>
+                  <td style="padding: 10px; font-weight: bold; color: #000;">My P/L</td>
+                  <td style="padding: 10px; font-weight: bold; color: #00a82d;">37.2</td>
+                  <td style="padding: 10px; color: #888;">-</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ccc;">
+                  <td style="padding: 10px; text-align: center; font-size: 13px;">🎩</td>
+                  <td style="padding: 10px; font-weight: bold; color: #000;">My Running P/L</td>
+                  <td style="padding: 10px; font-weight: bold; color: #00a82d;">37.2</td>
+                  <td style="padding: 10px; color: #888;">-</td>
+                </tr>
+                <tr style="background: #00a82d; color: white; border-bottom: none;">
+                  <td style="padding: 10px;"></td>
+                  <td style="padding: 10px; font-weight: 900; font-size: 13px;">TOTAL</td>
+                  <td style="padding: 10px; font-weight: 900; font-size: 13px;" colspan="2">40</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Right Table (Red) -->
+          <div style="flex: 1; min-width: 50%;">
+            <table class="bordered" style="background: #fff; font-size: 12px; border: 1px solid #ccc;">
+              <thead style="background: #b71c1c; color: white;">
+                <tr>
+                  <th style="padding: 10px; width: 30px;">UT</th>
+                  <th style="padding: 10px; text-align: left;">USERNAME</th>
+                  <th style="padding: 10px; text-align: left;">CHIP</th>
+                  <th style="padding: 10px; text-align: left;">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid #ccc;">
+                  <td style="padding: 10px; text-align: center;"><span style="background: #222; color: white; font-size: 10px; padding: 2px 5px; border-radius: 2px; font-weight: bold;">C</span></td>
+                  <td style="padding: 10px; font-weight: bold; color: #000;">Kingtest2 [Kingtest2 ]</td>
+                  <td style="padding: 10px; font-weight: bold; color: #b71c1c;">40</td>
+                  <td style="padding: 10px;">
+                    <button style="background: #333; color: white; border: none; padding: 3px 8px; font-size: 9px; cursor: pointer; border-radius: 2px; margin-right: 3px;">SETTLEMENT</button>
+                    <button style="background: #333; color: white; border: none; padding: 3px 8px; font-size: 9px; cursor: pointer; border-radius: 2px;">HISTORY</button>
+                  </td>
+                </tr>
+                <tr style="background: #b71c1c; color: white; border-bottom: none;">
+                  <td style="padding: 10px;"></td>
+                  <td style="padding: 10px; font-weight: 900; font-size: 13px;">TOTAL</td>
+                  <td style="padding: 10px; font-weight: 900; font-size: 13px;" colspan="2">40</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="deshboard.js"></script>
+  </body>
+</html>

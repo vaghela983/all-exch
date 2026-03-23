@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casino - Allexchbet</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="deshboard.css" />
+</head>
+
+<body>
+  <!-- Header Navigation -->
+  <header style="background: white; ">
+    <!-- Row 1: Balances & Hamburger -->
+    <div
+      style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative; background-color: #F5F5F5;">
+      <div style="display: flex; align-items: center;">
+        <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"
+          style="color: #000; margin-right: 10px; display: inline-flex;">
+          <i class="material-icons">menu</i>
+        </a>
+        <div class="bl-text">BL : <span style="color: #4caf50;">5000</span></div>
+      </div>
+      <div style="position: absolute; left: 50%; transform: translateX(-50%);"><b class="pl-text">PL:</b> 37.2</div>
+    </div>
+    <!-- Row 2: Central Logo -->
+    <!-- <div style="text-align: center; padding: 5px 0;">
+      <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 28px;" />
+    </div> -->
+    <!-- Row 3: Marquee -->
+    <div style="background: #f8f8f8; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
+      <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
+        <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING,
+          COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+    <li class="logo-container center-align">
+      <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+    </li>
+    <li id="dash_dashboard">
+      <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" />
+        HOME</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI
+        MARKET</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" />
+        MARKET ANALYSIS</a>
+    </li>
+    <li class="no-padding" id="dash_dashboard">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+              src="https://allexchbet.com/allexchbet.com/images/users.svg">people</i>
+            USERS LIST</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+              <li>
+                <a href="user_list.html?role=super_master">SUPER MASTER</a>
+              </li>
+              <li><a href="user_list.html?role=master">MASTER</a></li>
+              <li><a href="user_list.html?role=client">CLIENT</a></li>
+              <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+              src="https://allexchbet.com/allexchbet.com/images/users.svg">
+            CREATE NEW</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+              <li>
+                <a href="create_user.html?role=new_master">NEW MASTER</a>
+              </li>
+              <li>
+                <a href="create_user.html?role=new_client">NEW CLIENT</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/bets.svg" /> BETS</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+              <li>
+                <a href="bets.html?status=casino_pending">CASINO1 PENDING</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li id="dash_dashboard">
+      <a href="settlement.html" class="waves-effect waves-light"><img class="menu-icon"
+          src="https://allexchbet.com/allexchbet.com/images/chip-summery.svg"> SETTLEMENT
+        -NEW</a>
+    </li>
+    <li class="no-padding" id="dash_dashboard">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" />
+            REPORTS</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
+              <li>
+                <a href="reports.html?type=ac_statement">A/C STATEMENT</a>
+              </li>
+              <li>
+                <a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a>
+              </li>
+              <li>
+                <a href="reports.html?type=chip_summery">CHIP SUMMERY</a>
+              </li>
+              <li>
+                <a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a>
+              </li>
+              <li>
+                <a href="reports.html?type=sport_summery">SPORT SUMMERY</a>
+              </li>
+              <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
+              <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
+              <li>
+                <a href="reports.html?type=balance_sheet">BALANCE SHEET</a>
+              </li>
+              <li><a href="reports.html?type=export">EXPORT</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li id="dash_dashboard">
+      <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD
+        APK</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="rules.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+    </li>
+    <li class="profile-bottom" id="dash_dashboard">
+      <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE
+        (KINGTEST)</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="change_password.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> CHANGE
+        PASSWORD (KINGTEST)</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="index.html" class="waves-effect logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+    </li>
+  </ul>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Sport Tabs -->
+    <!-- <div class="tabs-container">
+      <ul class="tabs">
+        <li class="tab">
+          <a href="deshboard.html#inplay"><img src="https://allexchbet.com/allexchbet.com/images/in-play.svg" />
+            IN-PLAY
+            <span class="tab-badge">25</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#cricket"><img src="Assets/Deshboard/icon-cricket.svg" /> CRICKET
+            <span class="tab-badge">12</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#football"><img src="Assets/Deshboard/icon-football.svg" /> FOOTBALL
+            <span class="tab-badge">8</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#tennis"><img src="Assets/Deshboard/icon-tennis.svg" /> TENNIS
+            <span class="tab-badge">5</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#horse"><img src="Assets/Deshboard/icon-horse.svg" /> HORSE RACING
+            <span class="tab-badge">4</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#greyhound"><img src="Assets/Deshboard/icon-greyhound.svg" /> GREYHOUND
+            <span class="tab-badge">0</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#kabaddi"><img src="Assets/Deshboard/kabaddi.svg" /> KABADDI
+            <span class="tab-badge">0</span></a>
+        </li>
+        <li class="tab">
+          <a href="deshboard.html#politics"><img src="Assets/Deshboard/icon-politics.svg" /> POLITICS
+            <span class="tab-badge">0</span></a>
+        </li>
+        <li class="tab">
+          <a href="casino.html" class="active"><img src="Assets/Deshboard/icon-casino.svg" /> ALL CASINO</a>
+        </li>
+      </ul>
+    </div> -->
+
+    <div class="dashboard-content-wrap">
+      <!-- Casino Section -->
+      <div id="casino-container" class="event-section-wrap" style="background: white;">
+        <div class="event-header"
+          style="text-align: center; background: #fff; color: #00695c; font-weight: 800; font-size: 14px; border-bottom: 2px solid #eee;">
+          ALL CASINO</div>
+
+        <div class="casino-nav" style="border-bottom: 1px solid #ddd;">
+          <div
+            style="display: flex; flex-wrap: wrap; text-align: center; justify-content: space-between; font-size: 9px; font-weight: bold; color: #555;">
+            <div style="flex: 1; min-width: 60px; background: #00796b; color: white; padding: 5px;">AURA</div>
+            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">MAC88 GAMING</div>
+            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">MAC EXCITE</div>
+            <div style="flex: 1; min-width: 50px; padding: 5px; border-right: 1px solid #ddd;">MAC88</div>
+            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">FUN GAMES</div>
+            <div style="flex: 1; min-width: 80px; padding: 5px; border-right: 1px solid #ddd;">EVOLUTION GAMING</div>
+            <div style="flex: 1; min-width: 50px; padding: 5px; border-right: 1px solid #ddd;">EZUGI</div>
+            <div style="flex: 1; min-width: 50px; padding: 5px; border-right: 1px solid #ddd;">SPRIBE</div>
+            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">JILI GAMING</div>
+            <div style="flex: 1; min-width: 60px; padding: 5px; border-right: 1px solid #ddd;">TURBO GAMES</div>
+            <div style="flex: 1; min-width: 60px; padding: 5px;">SEXYBCRT</div>
+          </div>
+          <div
+            style="display: flex; text-align: center; font-size: 9px; font-weight: bold; color: #555; border-top: 1px solid #ddd;">
+            <div style="flex: 1; background: #00796b; color: white; padding: 3px;">ALL</div>
+            <div style="flex: 1; padding: 3px; background: #eee;">CARD_GAME</div>
+          </div>
+        </div>
+
+        <div class="casino-grid"
+          style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; padding: 2px; background: #fff;">
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">SUPER
+              OVER</div>
+            <div style="font-size: 30px; margin-top: -10px;">🏏</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">3
+              CARD JUDGMENT</div>
+            <div style="font-size: 30px; margin-top: -10px;">🃏</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">TEEN
+              PATTI ONE DAY</div>
+            <div style="font-size: 30px; margin-top: -10px;">♣️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">TEEN
+              PATTI T-20</div>
+            <div style="font-size: 30px; margin-top: -10px;">♠️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">TEEN
+              PATTI TEST</div>
+            <div style="font-size: 30px; margin-top: -10px;">♥️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">2
+              CARD TEEN PATTI</div>
+            <div style="font-size: 30px; margin-top: -10px;">♦️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">OPEN
+              TEEN PATTI</div>
+            <div style="font-size: 30px; margin-top: -10px;">♣️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+              MUFLIS TEEN PATTI</div>
+            <div style="font-size: 30px; margin-top: -10px;">♠️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+              DRAGON TIGER</div>
+            <div style="font-size: 30px; margin-top: -10px;">🐯</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">32
+              CARDS CASINO</div>
+            <div style="font-size: 30px; margin-top: -10px;">🃏</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+              BOLLYWOOD CASINO</div>
+            <div style="font-size: 30px; margin-top: -10px;">🎬</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">AMAR
+              AKBAR ANTHONY</div>
+            <div style="font-size: 30px; margin-top: -10px;">🧔</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">QUEEN
+              RACE</div>
+            <div style="font-size: 30px; margin-top: -10px;">👸</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+              BACCARAT</div>
+            <div style="font-size: 30px; margin-top: -10px;">👩</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">29
+              CARD BACCARAT</div>
+            <div style="font-size: 30px; margin-top: -10px;">🃏</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+              CASINO WAR</div>
+            <div style="font-size: 30px; margin-top: -10px;">⚔️</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">
+              CASINO METER</div>
+            <div style="font-size: 30px; margin-top: -10px;">🎰</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+          <div class="c-card"
+            style="background: linear-gradient(135deg, #4b0082, #800080); color: white; text-align: center; border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; height: 110px;">
+            <div style="padding: 15px 5px 5px 5px; font-weight: bold; font-size: 11px; text-transform: uppercase;">TRIO
+            </div>
+            <div style="font-size: 30px; margin-top: -10px;">🎲</div>
+            <div style="background: #00796b; color: white; font-size: 9px; font-weight: bold; padding: 4px;">PLAY NOW
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="deshboard.js"></script>
+</body>
+
+</html>

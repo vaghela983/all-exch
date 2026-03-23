@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List - Allexchbet</title>
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="deshboard.css" />
+    <style>
+      .user-list-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 5px 15px;
+        width: 100%;
+        border-bottom: 2px solid #ddd;
+      }
+      .search-container input {
+        border: none !important;
+        margin: 0 !important;
+        height: 30px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        font-size: 14px !important;
+        color: #333;
+        width: 100% !important;
+      }
+      .user-table {
+        background: white;
+        font-size: 12px;
+      }
+      .user-table thead {
+        background: #1a1a1a;
+        color: white;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+      }
+      .user-table th,
+      .user-table td {
+        padding: 8px 10px !important;
+        border-right: 1px solid #eee;
+        text-align: left;
+        vertical-align: middle;
+      }
+      .user-table th {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .opt-btn {
+        background: var(--teal-primary);
+        color: white;
+        height: 22px;
+        min-width: 22px;
+        padding: 0 4px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 9px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .opt-btn.large-p {
+        background: #0b4a4d;
+        height: 28px;
+        min-width: 28px;
+        font-size: 14px;
+      }
+      .status-box {
+        background: #4caf50;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .client-badge {
+        background: #1a1a1a;
+        color: white;
+        border-radius: 2px;
+        padding: 2px 6px;
+        font-weight: bold;
+        margin-right: 8px;
+        font-size: 11px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1:1 Header Navigation -->
+        <header style="background: white; border-bottom: 2px solid #ccc;">
+      <!-- Row 1: Balances & Hamburger -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
+          <div style="display: flex; align-items: center;">
+             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
+                 <i class="material-icons">menu</i>
+             </a>
+             <div>BL : <span style="color: #4caf50;">5000</span></div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
+      </div>
+      <!-- Row 2: Central Logo -->
+      <div style="text-align: center; padding: 5px 0;">
+          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
+      </div>
+      <!-- Row 3: Marquee -->
+      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
+          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
+              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
+          </div>
+      </div>
+    </header>
+
+    <!-- 1:1 Sidebar -->
+    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+      <li class="logo-container center-align">
+        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+      </li>
+      <li>
+        <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" /> HOME</a>
+      </li>
+      <li>
+        <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a>
+      </li>
+      <li>
+        <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect waves-light active-nav"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">people</i> USERS LIST<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+                <li><a href="user_list.html?role=super_master">SUPER MASTER</a></li>
+                <li><a href="user_list.html?role=master">MASTER</a></li>
+                <li><a href="user_list.html?role=client">CLIENT</a></li>
+                <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">add_circle_outline</i> CREATE NEW<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+                <li><a href="create_user.html?role=new_master">NEW MASTER</a></li>
+                <li><a href="create_user.html?role=new_client">NEW CLIENT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/bets.svg" /> BETS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+                <li><a href="bets.html?status=casino_pending">CASINO1 PENDING</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="settlement.html" class="waves-effect waves-light"><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT -NEW</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
+                <li><a href="reports.html?type=ac_statement">A/C STATEMENT</a></li>
+                <li><a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a></li>
+                <li><a href="reports.html?type=chip_summery">CHIP SUMMERY</a></li>
+                <li><a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a></li>
+                <li><a href="reports.html?type=sport_summery">SPORT SUMMERY</a></li>
+                <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
+                <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
+                <li><a href="reports.html?type=balance_sheet">BALANCE SHEET</a></li>
+                <li><a href="reports.html?type=export">EXPORT</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a>
+      </li>
+      <li>
+        <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+      </li>
+      <li>
+        <a href="rules.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+      </li>
+      <li class="profile-bottom">
+        <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a>
+      </li>
+      <li>
+        <a href="change_password.html" class="waves-effect waves-light"><img src="Assets/Deshboard/edit.svg" /> CHANGE PASSWORD (KINGTEST)</a>
+      </li>
+      <li>
+        <a href="index.html" class="waves-effect waves-light logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+      </li>
+    </ul>
+
+    <!-- Main Content -->
+    <main>
+      <div
+        style="
+          background-color: #ffffff;
+          color: var(--teal-primary, #008080);
+          padding: 10px;
+          text-align: center;
+          font-weight: 900;
+          font-size: 16px;
+          text-transform: uppercase;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        "
+        id="page-title"
+      >
+        KINGTEST
+      </div>
+
+      <div class="marquee-bar" style="background: transparent; border: none;">
+        <div class="mercury-container">
+          <div class="mercury-ticker" id="mercury-ticker-text">
+            CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION,SNIPING,COURT-SIDING,COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.THIS SITE RESERVES THE RIGHT TO VOID THE BETS IN QUESTION WITHOUT WARNING !
+          </div>
+        </div>
+      </div>
+
+      <div class="user-list-header" style="background: #f4f4f4; border: none; padding: 10px 15px;">
+        <div class="search-container">
+          <i class="material-icons grey-text text-darken-2" style="font-size: 20px; font-weight: bold; margin-right: 10px;">search</i>
+          <input type="text" placeholder="Search Username" style="font-size: 13px; font-weight: 500; color: #aaa;" />
+        </div>
+      </div>
+
+      <div style="padding: 0 10px">
+        <table class="user-table bordered striped">
+          <thead>
+            <tr>
+              <th>USERNAME</th>
+              <th>BALANCE</th>
+              <th>P/L</th>
+              <th>EXP</th>
+              <th>CLIENT SHARE</th>
+              <th>UP-LINE</th>
+              <th>STATUS</th>
+              <th>BET</th>
+              <th>OPTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="user-table-body">
+            <!-- Dynamic Rows -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="deshboard.js"></script>
+    <script>
+      $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const role = urlParams.get("role");
+
+        const titleMap = {
+          my_child: "MY CHILD LIST",
+          super_master: "SUPER MASTER LIST",
+          master: "MASTER LIST",
+          client: "CLIENT LIST",
+          blocked: "BLOCKED USERS LIST",
+        };
+
+        if (role && titleMap[role]) {
+          $("#page-title").text(titleMap[role]);
+        }
+
+        // Load Live User Data
+        fetch("user_list.json")
+          .then(res => res.json())
+          .then(data => {
+            renderUsers(data);
+          })
+          .catch(err => console.error("Error loading users:", err));
+
+        function renderUsers(users) {
+          let html = "";
+          users.forEach((u) => {
+            html += `
+                      <tr>
+                          <td style="display: flex; align-items: center;"><span class="client-badge">C</span> ${u.username} [${u.username}]</td>
+                          <td>${u.balance}</td>
+                          <td>${u.profit_loss}</td>
+                          <td>${u.exposure}</td>
+                          <td>100</td>
+                          <td>Kingtest</td>
+                          <td><div class="status-box"><i class="material-icons" style="color: white; font-size: 14px;">lock_open</i></div></td>
+                          <td><div class="status-box"><i class="material-icons" style="color: white; font-size: 14px;">lock_open</i></div></td>
+                          <td>
+                              <div style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap;">
+                                  <div class="opt-btn"><i class="material-icons" style="font-size: 12px;">edit</i></div>
+                                  <div class="opt-btn">D</div>
+                                  <div class="opt-btn">W</div>
+                                  <div class="opt-btn">A/C</div>
+                                  <div class="opt-btn">C/S-N</div>
+                                  <div class="opt-btn">C/S</div>
+                                  <div class="opt-btn">P/L</div>
+                                  <div class="opt-btn">S/R-N</div>
+                                  <div class="opt-btn">S/PL</div>
+                                  <div class="opt-btn large-p">P</div>
+                                  <div class="opt-btn">EH</div>
+                                  <div class="opt-btn">PB</div>
+                                  <div class="opt-btn">S</div>
+                                  <div class="opt-btn">CS</div>
+                                  <div class="opt-btn">ICS</div>
+                                  <div class="opt-btn">BS</div>
+                              </div>
+                          </td>
+                      </tr>
+                  `;
+          });
+          $("#user-table-body").html(html);
+        }
+      });
+    </script>
+  </body>
+</html>

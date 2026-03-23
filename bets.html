@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bets - Allexchbet</title>
+    <!-- Materialize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="deshboard.css" />
+    <style>
+      .bet-table {
+        background: white;
+        font-size: 12px;
+        margin-top: 15px;
+      }
+      .bet-table thead {
+        background: var(--teal-primary);
+        color: white;
+      }
+      .bet-table th,
+      .bet-table td {
+        padding: 10px 12px !important;
+        border-right: 1px solid #eee;
+        text-align: center;
+      }
+      .type-back {
+        background: #bbdefb !important;
+        color: #0d47a1;
+        font-weight: bold;
+        border-radius: 4px;
+        padding: 2px 8px;
+      }
+      .type-lay {
+        background: #f8bbd0 !important;
+        color: #880e4f;
+        font-weight: bold;
+        border-radius: 4px;
+        padding: 2px 8px;
+      }
+      .bet-match-title {
+        text-align: left !important;
+        font-weight: 500;
+        color: #333;
+      }
+      .pnl-pos {
+        color: green;
+        font-weight: bold;
+      }
+      .pnl-neg {
+        color: red;
+        font-weight: bold;
+      }
+      .filter-col {
+        margin-bottom: 25px !important;
+        position: relative;
+      }
+      .filter-lbl {
+        font-weight: 500;
+        font-size: 11px;
+        color: #0d47a1;
+        display: block;
+        margin-bottom: 2px;
+      }
+      .filter-input, .filter-select {
+        border: none !important;
+        border-bottom: 1.5px solid #ccc !important;
+        box-shadow: none !important;
+        height: 30px !important;
+        margin: 0 !important;
+        font-size: 13px !important;
+        padding: 0 !important;
+        background: transparent !important;
+        color: #333 !important;
+        outline: none;
+      }
+      .filter-input::placeholder {
+        color: #ccc;
+      }
+      .filter-select {
+        display: block !important;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+      }
+      .select-arrow {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        pointer-events: none;
+        font-size: 16px;
+        color: #333;
+      }
+      .date-icon {
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+        pointer-events: none;
+        font-size: 16px;
+        color: #333;
+      }
+      .btn-search {
+        background-color: #076466 !important;
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        font-weight: 500;
+        font-size: 13px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+        border-radius: 2px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+        <header style="background: white; border-bottom: 2px solid #ccc;">
+      <!-- Row 1: Balances & Hamburger -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
+          <div style="display: flex; align-items: center;">
+             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
+                 <i class="material-icons">menu</i>
+             </a>
+             <div>BL : <span style="color: #4caf50;">5000</span></div>
+          </div>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
+      </div>
+      <!-- Row 2: Central Logo -->
+      <div style="text-align: center; padding: 5px 0;">
+          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
+      </div>
+      <!-- Row 3: Marquee -->
+      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
+          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
+              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
+          </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+      <li class="logo-container center-align">
+        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+      </li>
+      <li>
+        <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" /> HOME</a>
+      </li>
+      <li>
+        <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a>
+      </li>
+      <li>
+        <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">people</i> USERS LIST<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+                <li><a href="user_list.html?role=super_master">SUPER MASTER</a></li>
+                <li><a href="user_list.html?role=master">MASTER</a></li>
+                <li><a href="user_list.html?role=client">CLIENT</a></li>
+                <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">add_circle_outline</i> CREATE NEW<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+                <li><a href="create_user.html?role=new_master">NEW MASTER</a></li>
+                <li><a href="create_user.html?role=new_client">NEW CLIENT</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="collapsible-header waves-effect active-nav"><img src="Assets/Deshboard/bets.svg" /> BETS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+                <li><a href="bets.html?status=casino_pending">CASINO1 PENDING</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="settlement.html" class="waves-effect waves-light"><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT -NEW</a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i class="material-icons right white-text">arrow_drop_down</i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
+                <li><a href="reports.html?type=ac_statement">A/C STATEMENT</a></li>
+                <li><a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a></li>
+                <li><a href="reports.html?type=chip_summery">CHIP SUMMERY</a></li>
+                <li><a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a></li>
+                <li><a href="reports.html?type=sport_summery">SPORT SUMMERY</a></li>
+                <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
+                <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
+                <li><a href="reports.html?type=balance_sheet">BALANCE SHEET</a></li>
+                <li><a href="reports.html?type=export">EXPORT</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="download_apk.html" class="waves-effect"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a>
+      </li>
+      <li>
+        <a href="terms.html" class="waves-effect"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+      </li>
+      <li>
+        <a href="rules.html" class="waves-effect"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+      </li>
+      <li class="profile-bottom">
+        <a href="profile.html" class="waves-effect"><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a>
+      </li>
+      <li>
+        <a href="change_password.html" class="waves-effect"><img src="Assets/Deshboard/edit.svg" /> CHANGE PASSWORD (KINGTEST)</a>
+      </li>
+      <li>
+        <a href="index.html" class="waves-effect logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+      </li>
+    </ul>
+
+    <!-- Main Content -->
+    <main>
+      <div
+        style="
+          background-color: white;
+          color: #0b4a4d;
+          padding: 15px;
+          text-align: center;
+          font-weight: 900;
+          font-size: 18px;
+          text-transform: uppercase;
+          border-bottom: 2px solid #eee;
+        "
+        id="page-title"
+      >
+        PENDING BET HISTORY
+      </div>
+
+      <div class="marquee-bar" style="background: transparent; border: none; padding-left: 0 !important;">
+        <div class="mercury-container">
+          <div class="mercury-ticker" id="mercury-ticker-text">
+Cheating of any kind such as Market Manipulation,Sniping,Court-Siding,Commission Abuse & Bets After Event Closed are not allowed on any site operating on this platform.This Site RESERVES the RIGHT to VOID the bets in QUESTION WITHOUT WARNING !          </div>
+        </div>
+      </div>
+
+      <div id="unsettled-filters" style="background: transparent; margin: 15px 15px 25px 15px; padding: 5px;">
+        <div class="row" style="margin-bottom: 0;">
+          <div class="col s12 m3 filter-col">
+            <label class="filter-lbl">Username</label>
+            <input id="username" type="text" class="filter-input" placeholder="Username" />
+          </div>
+          <div class="col s12 m3 filter-col">
+            <label class="filter-lbl">Sport</label>
+            <select id="sport" class="filter-select">
+              <option value="all">All</option>
+              <option value="cricket">Cricket</option>
+              <option value="football">Football</option>
+              <option value="tennis">Tennis</option>
+            </select>
+            <i class="material-icons select-arrow">arrow_drop_down</i>
+          </div>
+          <div class="col s12 m3 filter-col">
+            <label class="filter-lbl">Start date</label>
+            <input id="start_date" type="text" class="filter-input" placeholder="mm/dd/yyyy" />
+            <i class="material-icons date-icon">calendar_today</i>
+          </div>
+          <div class="col s12 m3 filter-col">
+            <label class="filter-lbl">End date</label>
+            <input id="end_date" type="text" class="filter-input" placeholder="mm/dd/yyyy" />
+            <i class="material-icons date-icon">calendar_today</i>
+          </div>
+        </div>
+        
+        <div class="row" style="margin-bottom: 0;">
+          <div class="col s12 m3 filter-col" style="margin-bottom: 5px !important;">
+            <label class="filter-lbl">Min Stake</label>
+            <input id="min_stake" type="text" class="filter-input" placeholder="Min Stake" />
+          </div>
+          <div class="col s12 m3 filter-col" style="margin-bottom: 5px !important;">
+            <label class="filter-lbl">Max Stake</label>
+            <input id="max_stake" type="text" class="filter-input" placeholder="Max Stake" />
+          </div>
+          <div class="col s12 m3 filter-col" style="margin-bottom: 5px !important; display: flex; align-items: flex-end; padding-top: 15px;">
+             <button class="btn waves-effect btn-search">SEARCH</button>
+          </div>
+          <div class="col s12 m3 filter-col" style="margin-bottom: 5px !important;">
+          </div>
+        </div>
+      </div>
+
+      <div id="unsettled-table-container" style="padding: 0 15px;">
+        <table class="bet-table bordered striped">
+          <thead style="background: #076466;">
+            <tr>
+              <th>NO</th>
+              <th>USER</th>
+              <th>EVENT</th>
+              <th>RUNNER</th>
+              <th>RATE</th>
+              <th>STAKE</th>
+              <th>COMM IN</th>
+              <th>COMM OUT</th>
+              <th>PROFIT</th>
+              <th>LOSS</th>
+              <th>DATE/TIME</th>
+              <th>IP</th>
+            </tr>
+          </thead>
+          <tbody id="bet-table-body">
+            <tr>
+               <td colspan="12" style="background: white; color: transparent; padding: 100px 0 !important;">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="casino-pending-table-container" style="padding: 0 15px; display: none;">
+        <table class="bet-table bordered striped">
+          <thead style="background: #076466;">
+            <tr>
+              <th>NO</th>
+              <th>USERNAME</th>
+              <th>EVENT</th>
+              <th>ROUND ID</th>
+              <th>ORDER ID</th>
+              <th>MARKET ID</th>
+              <th>RUNNER</th>
+              <th>ODD</th>
+              <th>STAKE</th>
+              <th>TOTAL</th>
+              <th>DATE/TIME</th>
+            </tr>
+          </thead>
+          <tbody id="casino-bet-table-body">
+            <tr>
+               <td colspan="11" style="background: white; color: transparent; padding: 100px 0 !important;">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="deshboard.js"></script>
+    <script>
+      $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get("status");
+
+        const titleMap = {
+          unsettled: "PENDING BET HISTORY",
+          casino_pending: "CASINO 1 PENDING BET HISTORY",
+        };
+
+        if (status && titleMap[status]) {
+          $("#page-title").text(titleMap[status]);
+        }
+        
+        if (status === 'casino_pending') {
+          $("#unsettled-filters").hide();
+          $("#unsettled-table-container").hide();
+          $("#casino-pending-table-container").show();
+        } else {
+          $("#unsettled-filters").show();
+          $("#unsettled-table-container").show();
+          $("#casino-pending-table-container").hide();
+        }
+      });
+    </script>
+  </body>
+</html>

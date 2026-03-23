@@ -1,0 +1,132 @@
+{
+  "events": {
+    "1": [
+      {
+        "id": 35366889,
+        "name": "Lyon v Celta Vigo",
+        "open_date": "2026-03-19T17:45:00.000000Z",
+        "in_play": 1,
+        "status": 0,
+        "tv_channel": "8311"
+      },
+      {
+        "id": 35366890,
+        "name": "Midtjylland v Nottm Forest",
+        "open_date": "2026-03-19T17:45:00.000000Z",
+        "in_play": 1
+      },
+      {
+        "id": 35366891,
+        "name": "Freiburg v Genk",
+        "open_date": "2026-03-19T17:45:00.000000Z",
+        "in_play": 1
+      },
+      {
+        "id": 35366892,
+        "name": "Dinamo Bucharest v Universitatea Craiova",
+        "open_date": "2026-03-20T00:00:00.000000Z",
+        "in_play": 0
+      }
+    ],
+    "2": [
+      {
+        "id": 35377324,
+        "name": "F Jones v V Williams",
+        "open_date": "2026-03-17T18:30:00.000000Z",
+        "in_play": 0
+      },
+      {
+        "id": 35381359,
+        "name": "A Muller v Berrettini",
+        "open_date": "2026-03-18T15:30:00.000000Z",
+        "in_play": 1
+      },
+      {
+        "id": 35381360,
+        "name": "Shapovalov v Bot Van De Zandschulp",
+        "open_date": "2026-03-18T15:30:00.000000Z",
+        "in_play": 1
+      },
+      {
+        "id": 35381361,
+        "name": "Djokovic v Nadal",
+        "open_date": "2026-03-20T19:00:00.000000Z",
+        "in_play": 0
+      },
+      {
+        "id": 35381362,
+        "name": "Alcaraz v Sinner",
+        "open_date": "2026-03-20T21:30:00.000000Z",
+        "in_play": 0
+      }
+    ],
+    "4": [
+      {
+        "id": 35385552,
+        "name": "Karachi Region Whites v Abbottabad Region",
+        "open_date": "2026-03-19T15:00:00.000000Z",
+        "in_play": 1,
+        "fancy_active": 1,
+        "bm_active": 1
+      },
+      {
+        "id": 28127348,
+        "name": "Indian Premier League",
+        "open_date": "2026-03-28T13:00:00.000000Z",
+        "competition_id": 101480
+      }
+    ],
+    "7": [
+      {
+        "id": 4001,
+        "name": "14:15 Chelmsford City",
+        "open_date": "2026-03-20T14:15:00.000Z",
+        "in_play": 0
+      },
+      {
+        "id": 4002,
+        "name": "14:45 Southwell",
+        "open_date": "2026-03-20T14:45:00.000Z",
+        "in_play": 0
+      }
+    ],
+    "4339": [
+      {
+        "id": 5001,
+        "name": "18:09 Perry Barr",
+        "open_date": "2026-03-20T18:09:00.000Z",
+        "in_play": 0
+      }
+    ],
+    "10": [
+      {
+        "id": 6001,
+        "name": "Pro Kabaddi: Jaipur v Patna",
+        "open_date": "2026-03-20T20:00:00.000Z",
+        "in_play": 0
+      }
+    ],
+    "11": [
+      {
+        "id": 7001,
+        "name": "UK General Election - Most Seats",
+        "open_date": "2026-05-01T12:00:00.000Z",
+        "in_play": 0
+      }
+    ],
+    "12": [
+      {
+        "id": 8001,
+        "name": "Live Roulette",
+        "open_date": "2026-03-20T00:00:00.000Z",
+        "in_play": 1
+      },
+      {
+        "id": 8002,
+        "name": "Teen Patti",
+        "open_date": "2026-03-20T00:00:00.000Z",
+        "in_play": 1
+      }
+    ]
+  }
+}
