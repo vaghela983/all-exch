@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chip Summery - Allexchbet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="reports.css">
+    <style>
+        .summary-list {
+            background-color: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .summary-item {
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+        .summary-header {
+            background-color: var(--table-header-bg);
+            color: white;
+            padding: 10px 20px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="sidebar-logo">
+            <img src="Assets/Deshboard/logo2.png" alt="Allexchbet">
+        </div>
+        <div class="nav-menu">
+            <a href="#" class="nav-item"><i class="fa fa-home"></i> HOME</a>
+            <a href="#" class="nav-item"><i class="fa fa-star"></i> MULTI MARKET</a>
+            <a href="#" class="nav-item"><i class="fa fa-chart-line"></i> MARKET ANALYSIS</a>
+            <a href="#" class="nav-item"><i class="fa fa-users"></i> USERS LIST</a>
+            <a href="#" class="nav-item"><i class="fa fa-plus-circle"></i> CREATE NEW</a>
+            <a href="#" class="nav-item"><i class="fa fa-dice"></i> BETS</a>
+            <a href="#" class="nav-item"><i class="fa fa-arrows-spin"></i> SETTLEMENT -NEW</a>
+            <a href="#reportsSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
+                <i class="fa fa-chart-bar"></i> REPORTS <i class="fa fa-chevron-down ms-auto font-11"></i>
+            </a>
+            <div class="collapse show" id="reportsSubmenu">
+                <div class="submenu">
+                    <a href="reports.html" class="submenu-item">PROFIT LOSS</a>
+                    <a href="ac_statement.html" class="submenu-item">A/C STATEMENT</a>
+                    <a href="chip_stmt_new.html" class="submenu-item">CHIP STMT NEW</a>
+                    <a href="chip_summery.html" class="submenu-item active">CHIP SUMMERY</a>
+                    <a href="settl_report_new.html" class="submenu-item">SETTL. REPORT NEW</a>
+                    <a href="sport_summery.html" class="submenu-item">SPORT SUMMERY</a>
+                    <a href="top_clients.html" class="submenu-item">TOP CLINETS</a>
+                    <a href="weekly_report.html" class="submenu-item">WEEK-REPORT</a>
+                    <a href="balance_sheet.html" class="submenu-item">BALANCE SHEET</a>
+                    <a href="export.html" class="submenu-item">EXPORT</a>
+                </div>
+            </div>
+            <a href="#" class="nav-item"><i class="fa fa-mobile-screen"></i> DOWNLOAD APK</a>
+            <a href="#" class="nav-item"><i class="fa fa-file-lines"></i> T & C</a>
+            <a href="#" class="nav-item"><i class="fa fa-gavel"></i> RULES</a>
+            <a href="#" class="nav-item"><i class="fa fa-user-circle"></i> PROFILE (KINGTEST)</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="top-bar">
+            <div class="balance-info">BL : <span class="text-success">5000</span></div>
+            <div class="pl-info">PL : <span class="text-dark">37.20</span></div>
+        </div>
+        <div class="page-title-box">
+            <h1 class="page-title">CHIP SUMMERY</h1>
+        </div>
+        <div class="ticker-marquee">
+            <p>CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.</p>
+        </div>
+        
+        <div class="container-fluid mt-3">
+            <div class="summary-list">
+                <div class="summary-header">CHIP SUMMERY</div>
+                <div class="summary-item"><span>User :</span> <span>Kingtest</span></div>
+                <div class="summary-item"><span>Current Balance :</span> <span>5000</span></div>
+                <div class="summary-item"><span>Children Free Chip :</span> <span>5000</span></div>
+                <div class="summary-item"><span>Client Total Wallet :</span> <span>4960</span></div>
+                <div class="summary-item"><span>Up-line PL :</span> <span>3</span></div>
+                <div class="summary-item"><span>Sub Total :</span> <span>10000</span></div>
+                <div class="summary-item"><span>Used Free Chip :</span> <span>0</span></div>
+                <div class="summary-item"><span>Total :</span> <span>10000</span></div>
+                <div class="summary-item"><span>Total Clients :</span> <span>1</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

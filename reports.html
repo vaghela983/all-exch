@@ -1,799 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reports - Allexchbet</title>
-    <!-- Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Loss - Allexchbet</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="deshboard.css" />
-    <style>
-      .filter-bar {
-        background: #fff;
-        padding: 15px;
-        margin: 10px;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .filter-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .filter-item label {
-        color: #555;
-        font-weight: 500;
-        font-size: 13px;
-      }
-      .filter-item input {
-        border: 1px solid #ddd !important;
-        border-radius: 4px !important;
-        padding: 0 10px !important;
-        height: 32px !important;
-        width: 150px !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-      }
-      .search-btn {
-        background-color: var(--teal-primary) !important;
-        height: 32px !important;
-        line-height: 32px !important;
-        padding: 0 20px !important;
-        text-transform: uppercase;
-        font-size: 12px !important;
-      }
-      .report-table {
-        background: white;
-        font-size: 12px;
-        margin: 10px;
-        width: calc(100% - 20px);
-      }
-      .report-table thead {
-        background: #f5f5f5;
-        color: #333;
-        border-top: 2px solid var(--teal-primary);
-      }
-      .report-table th,
-      .report-table td {
-        padding: 10px !important;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-      }
-      .report-table tr:hover {
-        background: #fafafa;
-      }
-      .debit {
-        color: red;
-        font-weight: bold;
-      }
-      .credit {
-        color: green;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header Navigation -->
-        <header style="background: white; border-bottom: 2px solid #ccc;">
-      <!-- Row 1: Balances & Hamburger -->
-      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
-          <div style="display: flex; align-items: center;">
-             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
-                 <i class="material-icons">menu</i>
-             </a>
-             <div>BL : <span style="color: #4caf50;">5000</span></div>
-          </div>
-          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
-      </div>
-      <!-- Row 2: Central Logo -->
-      <div style="text-align: center; padding: 5px 0;">
-          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
-      </div>
-      <!-- Row 3: Marquee -->
-      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
-          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
-              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
-          </div>
-      </div>
-    </header>
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
 
     <!-- Sidebar -->
-    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
-      <li class="logo-container center-align">
-        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
-      </li>
-      <li>
-        <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" /> HOME</a>
-      </li>
-      <li>
-        <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a>
-      </li>
-      <li>
-        <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a>
-      </li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">people</i> USERS LIST<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
-                <li><a href="user_list.html?role=super_master">SUPER MASTER</a></li>
-                <li><a href="user_list.html?role=master">MASTER</a></li>
-                <li><a href="user_list.html?role=client">CLIENT</a></li>
-                <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">add_circle_outline</i> CREATE NEW<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
-                <li><a href="create_user.html?role=new_master">NEW MASTER</a></li>
-                <li><a href="create_user.html?role=new_client">NEW CLIENT</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="collapsible-header waves-effect"><img src="Assets/Deshboard/bets.svg" /> BETS<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
-                <li><a href="bets.html?status=casino_pending">CASINO1 PENDING</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="settlement.html" class="waves-effect waves-light"><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT -NEW</a>
-      </li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect active-nav"><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
-                <li><a href="reports.html?type=ac_statement">A/C STATEMENT</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a>
-      </li>
-      <li>
-        <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
-      </li>
-      <li>
-        <a href="rules.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
-      </li>
-      <li class="profile-bottom">
-        <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a>
-      </li>
-    </ul>
-
-    <main>
-      <div
-        style="
-          background-color: white;
-          color: var(--teal-primary);
-          padding: 15px;
-          text-align: center;
-          font-weight: 900;
-          font-size: 18px;
-          text-transform: uppercase;
-        "
-        id="page-title"
-      >
-        PROFIT LOSS[KINGTEST]
-      </div>
-
-      <!-- Profit Loss View -->
-      <div id="profit-loss-container">
-        <div style="background: transparent; padding: 0 15px;">
-        <div class="row" style="margin-bottom: 10px; margin-top: 15px;">
-          <!-- Column 1 -->
-          <div class="col s12 m4">
-             <label style="font-weight: bold; font-size: 11px; color: #0b4a4d; display: block; margin-bottom: 2px;">SPORT</label>
-             <select class="browser-default" style="border: none !important; background: #f4f4f4; height: 35px; width: 100%; outline: none; font-size: 14px; padding: 0 10px; border-radius: 2px;">
-                <option value="cricket">Cricket</option>
-             </select>
-          </div>
-          <!-- Column 2 -->
-          <div class="col s12 m4" style="display: flex; align-items: flex-end;">
-             <button class="btn waves-effect" style="margin-top: 18px; background-color: #333; width: 100%; height: 35px; line-height: 35px; font-weight: 500; font-size: 13px; box-shadow: none; border-radius: 2px;">DATE</button>
-          </div>
-          <!-- Column 3 -->
-          <div class="col s12 m4" style="display: flex; align-items: flex-end;">
-             <button class="btn waves-effect" style="margin-top: 18px; background-color: #333; width: 100%; height: 35px; line-height: 35px; font-weight: 500; font-size: 13px; box-shadow: none; border-radius: 2px;">SEARCH</button>
-          </div>
+    <div id="sidebar">
+        <div class="sidebar-logo">
+            <img src="Assets/Deshboard/logo2.png" alt="Allexchbet">
         </div>
-      </div>
-
-      <div style="padding: 0 15px;">
-        <table class="report-table bordered striped" style="margin: 0; width: 100%;">
-          <thead style="background: #076466; color: white;">
-            <tr>
-              <th style="color: white; border: none; padding: 10px;">NO</th>
-              <th style="color: white; border: none; text-align: left; padding: 10px;">EVENT</th>
-              <th style="color: white; border: none; padding: 10px;">COMM IN</th>
-              <th style="color: white; border: none; padding: 10px;">COMM OUT</th>
-              <th style="color: white; border: none; padding: 10px;">AMOUNT</th>
-              <th style="color: white; border: none; padding: 10px;">TOTAL</th>
-              <th style="color: white; border: none; padding: 10px;">INFO</th>
-            </tr>
-          </thead>
-          <tbody id="report-table-body">
-            <tr style="background: white !important;">
-              <td style="font-weight: bold;">#</td>
-              <td style="font-weight: bold; text-align: left; font-size: 13px;">Grand Total</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td style="font-weight: bold; color: red; font-size: 13px;">0</td>
-              <td></td>
-            </tr>
-            <tr style="background: #fbfbfb !important;">
-              <td style="font-weight: bold;">#</td>
-              <td style="font-weight: bold; text-align: left; font-size: 13px;">Page Total</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td style="font-weight: bold; color: red; font-size: 13px;">0</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      </div> <!-- End Profit Loss Container -->
-
-            <!-- A/C Statement View -->
-      <div id="ac-statement-container" style="display: none;">
-        <div class="main-container-extract">
-          <h1 class="extract-title" style="text-align: center; background: white; padding: 10px; margin-top: 0; margin-bottom: 0; font-size: 1.5rem; color: #000; font-weight: normal; text-transform: uppercase; border-bottom: 1px solid #ccc;">ACCOUNT STATEMENT[KINGTEST]</h1>
-          <div class="container-fluid" style="padding: 15px;">
-            <div class="row no-margin">
-                <div class="col s12 no-padding white account-filter">
-                    <div class="input-field col s4">
-                        <select>
-                            <option value="ALL" selected>All</option>
-                            <option value="4">Cricket</option>
-                            <option value="1">Football</option>
-                            <option value="2">Tennis</option>
-                        </select>
-                        <label>Sport</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <select>
-                            <option value="ALL" selected>All</option>
-                            <option value="2">Profit/Loss</option>
-                            <option value="3">Chip</option>
-                        </select>
-                        <label>Type</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <button class="btn col s12" type="button">By Date</button>
-                    </div>
+        <div class="nav-menu">
+            <a href="#" class="nav-item"><i class="fa fa-home"></i> HOME</a>
+            <a href="#" class="nav-item"><i class="fa fa-star"></i> MULTI MARKET</a>
+            <a href="#" class="nav-item"><i class="fa fa-chart-line"></i> MARKET ANALYSIS</a>
+            <a href="#" class="nav-item"><i class="fa fa-users"></i> USERS LIST</a>
+            <a href="#" class="nav-item"><i class="fa fa-plus-circle"></i> CREATE NEW</a>
+            <a href="#" class="nav-item"><i class="fa fa-dice"></i> BETS</a>
+            <a href="#" class="nav-item"><i class="fa fa-arrows-spin"></i> SETTLEMENT -NEW</a>
+            <a href="#reportsSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
+                <i class="fa fa-chart-bar"></i> REPORTS <i class="fa fa-chevron-down ms-auto font-11"></i>
+            </a>
+            <div class="collapse show" id="reportsSubmenu">
+                <div class="submenu">
+                    <a href="reports.html" class="submenu-item active">PROFIT LOSS</a>
+                    <a href="ac_statement.html" class="submenu-item">A/C STATEMENT</a>
+                    <a href="chip_stmt_new.html" class="submenu-item">CHIP STMT NEW</a>
+                    <a href="chip_summery.html" class="submenu-item">CHIP SUMMERY</a>
+                    <a href="settl_report_new.html" class="submenu-item">SETTL. REPORT NEW</a>
+                    <a href="sport_summery.html" class="submenu-item">SPORT SUMMERY</a>
+                    <a href="top_clients.html" class="submenu-item">TOP CLINETS</a>
+                    <a href="weekly_report.html" class="submenu-item">WEEK-REPORT</a>
+                    <a href="balance_sheet.html" class="submenu-item">BALANCE SHEET</a>
+                    <a href="export.html" class="submenu-item">EXPORT</a>
                 </div>
             </div>
-            <div class="col-12 ac-message" style="padding: 5px 5px;color: red;"></div>
-            <div class="table-wrapper" style="overflow-x: auto;width: 100%;">
-                <table style="width: 100%;" class="ac_statement_table table striped" id="ac_statement_table">
-                    <thead>
-                    <tr>
-                        <th class="hide-on-small-and-down">No</th>
-                        <th>Date</th>
-                        <th>Desc</th>
-                        <th>Type</th>
-                        <th class="hide-on-small-and-down">Comm IN</th>
-                        <th class="hide-on-small-and-down">Comm Out</th>
-                        <th class="hide-on-small-and-down">Amount</th>
-                        <th>Total</th>
-                        <th class="hide-on-small-and-down">D/C</th>
-                        <th>Balance</th>
-                        <th>Details</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="11" style="text-align:center !important;font-weight: 800">Please select date</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-          </div>
+            <a href="#" class="nav-item"><i class="fa fa-mobile-screen"></i> DOWNLOAD APK</a>
+            <a href="#" class="nav-item"><i class="fa fa-file-lines"></i> T & C</a>
+            <a href="#" class="nav-item"><i class="fa fa-gavel"></i> RULES</a>
+            <a href="#" class="nav-item"><i class="fa fa-user-circle"></i> PROFILE (KINGTEST)</a>
         </div>
-      </div> <!-- End A/C Statement Container -->
+    </div>
 
-      <!-- Chip Stmt New View -->
-      <div id="chip-stmt-container" style="display: none;">
-        <nav class="indigo" style="box-shadow: none;">
-            <div class="nav-wrapper" style="padding-left: 15px;">
-                <a href="#" class="brand-logo" style="position: static; font-size: 1.5rem;">Chip Statement</a>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="balance-info">
+                BL : <span class="text-success">5000</span>
             </div>
-        </nav>
-        <div class="container-fluid" style="padding: 15px;">
-            <div class="row no-margin">
-                <div class="col s12 no-padding white account-filter">
-                    <div class="input-field col s3">
-                        <select id="type" name="type">
-                            <option value="All">All</option>
-                            <option value="upline">Up-line</option>
-                            <option value="downline">Down-line</option>
-                        </select>
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="text" class="datepicker" placeholder="Start Date" value="2026-03-16">
-                    </div>
-                    <div class="input-field col s3">
-                        <input type="text" class="datepicker" placeholder="End Date" value="2026-03-23">
-                    </div>
-                    <div class="input-field col s3">
-                        <button class="btn col s12 searchButton" type="button">Search</button>
-                    </div>
+            <div class="pl-info">
+                PL : <span class="text-dark">37.20</span>
+            </div>
+        </div>
+
+        <!-- Dynamic Title Section -->
+        <div class="page-title-box">
+            <h1 class="page-title">PROFIT LOSS[KINGTEST]</h1>
+        </div>
+
+        <!-- Marquee Ticker -->
+        <div class="ticker-marquee">
+            <p>CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filter-section">
+            <div class="row align-items-end g-2">
+                <div class="col-lg-4 col-md-6">
+                    <label class="filter-label">SPORT</label>
+                    <select class="form-select form-select-custom">
+                        <option>All</option>
+                        <option selected>Cricket</option>
+                        <option>Football</option>
+                        <option>Tennis</option>
+                        <option>Horse Racing</option>
+                        <option>Greyhound Racing</option>
+                        <option>Kabaddi</option>
+                        <option>Politics</option>
+                        <option>Live Casino</option>
+                        <option>iCasino</option>
+                    </select>
                 </div>
-            </div>
-            <div class="table-wrapper" style="overflow-x: auto; width: 100%;">
-                <table style="width: 100%;" class="ac_statement_table table striped">
-                    <thead>
-                    <tr>
-                        <th class="hide-on-small-and-down">No</th>
-                        <th>Date</th>
-                        <th>Desc</th>
-                        <th>Type</th>
-                        <th class="hide-on-small-and-down">Comm IN</th>
-                        <th class="hide-on-small-and-down">Comm Out</th>
-                        <th class="hide-on-small-and-down">Amount</th>
-                        <th>Total</th>
-                        <th class="hide-on-small-and-down">D/C</th>
-                        <th>Balance</th>
-                        <th>Note</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="hide-on-small-and-down">1</td>
-                            <td>18/03/2026 12:31:46 PM</td>
-                            <td style="text-align: left">Deposit Free Chip to kingtest2</td>
-                            <td>Free Chip</td>
-                            <td class="hide-on-small-and-down" style="text-align: right">0.00</td>
-                            <td class="hide-on-small-and-down" style="text-align: right">0.00</td>
-                            <td class="hide-on-small-and-down" style="text-align: right">5000.00</td>
-                            <td style="text-align: right">5000.00</td>
-                            <td class="hide-on-small-and-down">Debit</td>
-                            <td style="text-align: right;font-weight: bold">5000.00</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-      </div> <!-- End Chip Stmt View -->
-
-      <!-- Chip Summery View -->
-      <div id="chip-summery-container" style="display: none;">
-        <nav class="indigo" style="box-shadow: none;">
-            <div class="nav-wrapper" style="padding-left: 15px;">
-                <a href="#" class="brand-logo" style="position: static; font-size: 1.5rem;">Chip Summery</a>
-            </div>
-        </nav>
-        <div class="row" style="padding: 15px;">
-            <div class="col s12">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="row">
-                            <div class="col s12">
-                                <ul class="collection with-header" style="margin: 0;">
-                                    <li class="collection-header"><h5>Chip Summery</h5></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>User : kingtest</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Current Balance : 5000</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Children Free Chip : 5000</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Client Total Wallet : 4960</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Up-line PL : 3</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Sub Total : 10000</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Used Free Chip : 0</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Total : 10000</div></li>
-                                    <li class="collection-item" style="padding-left: 10px"><div>Total Clients : 1</div></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-4 col-md-3">
+                    <button class="btn btn-dark-custom w-100 py-1">DATE</button>
+                </div>
+                <div class="col-lg-4 col-md-3">
+                    <button class="btn btn-dark-custom w-100 py-1">SEARCH</button>
                 </div>
             </div>
         </div>
-      </div> <!-- End Chip Summery Container -->
 
-      <!-- Settl. Report View -->
-      <div id="settl-report-container" style="display: none;">
-        <div class="container-fluid" style="padding: 15px;">
-            <div class="row">
-                <div class="col s12 no-padding white account-filter">
-                    <div class="input-field col s6">
-                        <div style="padding-top:10px; font-weight: bold;">Search By Date</div>
-                    </div>
-                    <div class="input-field col s6">
-                        <button class="btn col s12" type="button">Select Date</button>
-                    </div>
-                </div>
-            </div>
-            <table class="ac_statement_table table striped">
+        <!-- Table Section -->
+        <div class="table-container mt-2">
+            <table class="ac_statement_table">
                 <thead>
-                <tr>
-                    <th class="hide-on-small-and-down">No</th>
-                    <th>Desc</th>
-                    <th>Type</th>
-                    <th class="hide-on-small-and-down">Amount</th>
-                    <th>Total</th>
-                    <th class="hide-on-small-and-down">D/C</th>
-                    <th>Note</th>
-                    <th>Time/Date</th>
-                </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-      </div> <!-- End Settl Report -->
-
-      <!-- Sport Summery View -->
-      <div id="sport-summery-container" style="display: none;">
-        <div class="container-fluid" style="padding: 15px;">
-            <div class="row no-margin">
-                <div class="col s12 no-padding white account-filter">
-                    <div class="input-field col s4">
-                        <label style="top: -14px; color: #000 !important;" class="active">Start date</label>
-                        <input type="text" class="datepicker" value="2026-03-16">
-                    </div>
-                    <div class="input-field col s4">
-                        <label style="top: -14px; color: #000 !important;" class="active">End date</label>
-                        <input type="text" class="datepicker" value="2026-03-23">
-                    </div>
-                    <div class="input-field col s2">
-                        <button class="btn col s12" type="button">Search</button>
-                    </div>
-                    <div class="input-field col s2">
-                        <a class="btn col s12" type="button">Lifetime Search</a>
-                    </div>
-                </div>
-                <small style="color: red">*You can search within month only</small>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="card-panel form-ui" style="padding: 0px 10px 0px;">
-                        <div class="row">
-                            <h4>Sports Details<small>(16/03/2026 - 23/03/2026)</small></h4>
-                            <ul class="collapsible" style="margin: 0;">
-                                <li>
-                                    <div class="collapsible-header col s12" tabindex="0">
-                                        <div class="col s6">Tennis</div>
-                                        <div class="col s6 plus">37.20</div>
-                                    </div>
-                                    <div class="collapsible-body" style="background-color: white"></div>
-                                </li>
-                                <li>
-                                    <div class="collapsible-header col s12" tabindex="0">
-                                        <div class="col s6">Casino 1</div>
-                                        <div class="col s6 minus">0</div>
-                                    </div>
-                                    <div class="collapsible-body"><span class="col s12 no-padding white"></span></div>
-                                </li>
-                                <li>
-                                    <div class="collapsible-header col s12" tabindex="0">
-                                        <div class="col s6">Casino 2</div>
-                                        <div class="col s6 minus">0</div>
-                                    </div>
-                                    <div class="collapsible-body"><span class="col s12 no-padding white"></span></div>
-                                </li>
-                                <li class="collection-item col s12" style="padding-left: 10px; display: inline-block;">
-                                    <div class="col s6" style="padding-top:10px;">Total</div>
-                                    <div class="col s6 plus" style="padding-top:10px;">37.2</div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <h4>Client 100% Details<small>(16/03/2026 - 23/03/2026)</small></h4>
-                            <ul class="collapsible" style="margin: 0;">
-                                <li>
-                                    <div class="collapsible-header col s12" tabindex="0">
-                                        <div class="col s6">Tennis</div>
-                                        <div class="col s6 minus">-40.00</div>
-                                    </div>
-                                    <div class="collapsible-body" style="background-color: white"></div>
-                                </li>
-                                <li>
-                                    <div class="collapsible-header col s12" tabindex="0">
-                                        <div class="col s6">Casino 1</div>
-                                        <div class="col s6 minus">0</div>
-                                    </div>
-                                    <div class="collapsible-body"><span class="col s12 no-padding white"></span></div>
-                                </li>
-                                <li>
-                                    <div class="collapsible-header col s12" tabindex="0">
-                                        <div class="col s6">Casino 2</div>
-                                        <div class="col s6 minus">0</div>
-                                    </div>
-                                    <div class="collapsible-body"><span class="col s12 no-padding white"></span></div>
-                                </li>
-                                <li class="collection-item col s12" style="padding-left: 10px; display: inline-block;">
-                                    <div class="col s6" style="padding-top:10px;">Total</div>
-                                    <div class="col s6 minus" style="padding-top:10px;">-40</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div> <!-- End Sport Summery Container -->
-
-      <!-- Top Clients View -->
-      <div id="top-clients-container" style="display: none; padding: 15px;">
-        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper">
-            <table class="bet_list_table table striped dataTable">
-                <thead>
-                    <tr role="row">
-                        <th class="sorting" style="width: 734px;">Username</th>
-                        <th class="sorting sorting_desc" style="width: 469px;">Total</th>
+                    <tr>
+                        <th width="50">NO</th>
+                        <th>EVENT</th>
+                        <th>COMM IN</th>
+                        <th>COMM OUT</th>
+                        <th>AMOUNT</th>
+                        <th>TOTAL</th>
+                        <th width="100">INFO</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="odd"><td valign="top" colspan="2" class="dataTables_empty" style="text-align: center;">No data available in table</td></tr>
+                    <tr class="total-row">
+                        <td>#</td>
+                        <td>Grand Total</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-red">0</td>
+                        <td></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>#</td>
+                        <td>Page Total</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-red">0</td>
+                        <td></td>
+                    </tr>
                 </tbody>
-                <tfoot>
-                    <tr><th style="text-align:right">Total:</th><th>0</th></tr>
-                </tfoot>
             </table>
-            <div class="dataTables_info" style="padding-top: 10px;">Showing 0 to 0 of 0 entries</div>
         </div>
-      </div>
+    </div>
 
-      <!-- Week-Report View -->
-      <div id="week-report-container" style="display: none;">
-        <div class="container-fluid" style="padding: 15px;">
-            <div class="row">
-                <div class="col s12">
-                    <div class="card-panel form-ui" style="padding: 0px 10px 0px;">
-                        <div class="row">
-                            <h4>Weekly Report<small>(16/03/2026 - 22/03/2026)</small></h4>
-                            <table class="cell-border table striped">
-                                <thead>
-                                <tr>
-                                    <th>Sport</th>
-                                    <th>16-3-2026</th>
-                                    <th>17-3-2026</th>
-                                    <th>18-3-2026</th>
-                                    <th>19-3-2026</th>
-                                    <th>20-3-2026</th>
-                                    <th>21-3-2026</th>
-                                    <th>22-3-2026</th>
-                                    <th>Total</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Tennis</td>
-                                        <td class="minus right-align">0</td>
-                                        <td class="minus right-align">0</td>
-                                        <td class="plus right-align">37.20</td>
-                                        <td class="minus right-align">0</td>
-                                        <td class="minus right-align">0</td>
-                                        <td class="minus right-align">0</td>
-                                        <td class="minus right-align">0</td>
-                                        <td class="plus right-align">37.2</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <td>Total</td>
-                                    <td class="minus right-align">0</td>
-                                    <td class="minus right-align">0</td>
-                                    <td class="plus right-align">37.2</td>
-                                    <td class="minus right-align">0</td>
-                                    <td class="minus right-align">0</td>
-                                    <td class="minus right-align">0</td>
-                                    <td class="minus right-align">0</td>
-                                    <td class="plus right-align">37.2</td>
-                                </tr>
-                                </tfoot>
-                            </table>
-
-                            <h4>Casino Details</h4>
-                            <table class="cell-border table striped">
-                                <thead>
-                                <tr>
-                                    <th>Sport</th>
-                                    <th>16-3-2026</th>
-                                    <th>17-3-2026</th>
-                                    <th>18-3-2026</th>
-                                    <th>19-3-2026</th>
-                                    <th>20-3-2026</th>
-                                    <th>21-3-2026</th>
-                                    <th>22-3-2026</th>
-                                    <th>Total</th>
-                                </tr>
-                                </thead>
-                                <tbody></tbody>
-                                <tfoot>
-                                <tr>
-                                    <td>Total</td>
-                                    <td class="minus right-align">0</td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <!-- Balance Sheet View -->
-      <div id="balance-sheet-container" style="display: none;">
-        <div class="container-fluid" style="padding: 15px;">
-            <div class="row no-margin">
-                <form method="get">
-                    <div class="col s12 no-padding white account-filter">
-                        <div class="input-field col s4">
-                            <input type="text" name="start_date" id="start_date_bs" value="2026-03-20" class="datepicker">
-                            <label class="active" style="top: -14px;">Start date</label>
-                        </div>
-                        <div class="input-field col s4">
-                            <input type="text" name="end_date" id="end_date_bs" value="2026-03-23" class="datepicker">
-                            <label class="active" style="top: -14px;">End date</label>
-                        </div>
-                        <div class="input-field col s4">
-                            <button class="btn col s12" type="button">Search</button>
-                        </div>
-                    </div>
-                    <small style="color: red">*You can search within month only</small>
-                </form>
-            </div>
-            <div class="row">
-                <div class="col s12 no-padding">
-                    <div class="card col m6 s12 chip-summery plus-side">
-                        <div class="card-content no-padding center-align">
-                            <h1>No data found</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <!-- Export View -->
-      <div id="export-container" style="display: none; padding: 15px;">
-        <div class="row">
-            <div class="col s12">
-                <div class="card col s12 m6 offset-m3 no-padding">
-                    <div class="card-content">
-                        <h5>kingtest's Export Options</h5>
-                        <h6 class="red-text col s12">* All time will be in IST(UTC +05:30)</h6>
-                        <h6 class="red-text col s12">* Max 15 Days Export Allowed</h6>
-                        <form method="post">
-                            <table class="table striped">
-                                <tbody>
-                                <tr>
-                                    <td>Select Type</td>
-                                    <td>
-                                        <select class="browser-default">
-                                            <option value="PL">Profit Loss</option>
-                                            <option value="AS">Account Statement</option>
-                                            <option value="FCS">Free Chip Statement</option>
-                                            <option value="SS">Settlement Statement</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Select Sport</td>
-                                    <td>
-                                        <select class="browser-default">
-                                            <option value="ALL" selected>All</option>
-                                            <option value="4">Cricket</option>
-                                            <option value="1">Football</option>
-                                            <option value="2">Tennis</option>
-                                            <option value="7">Horse Racing</option>
-                                            <option value="4339">Greyhound Racing</option>
-                                            <option value="99994">Kabaddi</option>
-                                            <option value="2378961">Politics</option>
-                                            <option value="99999">Live Casino</option>
-                                            <option value="99995">iCasino</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Start Date</td>
-                                    <td><input type="text" class="datepicker" value="2026-03-16"></td>
-                                </tr>
-                                <tr>
-                                    <td>End Date</td>
-                                    <td><input type="text" class="datepicker" value="2026-03-23"></td>
-                                </tr>
-                                <tr>
-                                    <td class="center-align" colspan="2">
-                                        <div class="col s12">
-                                            <button type="submit" class="green btn"><i class="material-icons left">download</i>Excel
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody></table>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div> <!-- End Export Container -->
-
-    </main>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="deshboard.js"></script>
-    <script>
-      $(document).ready(function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const type = urlParams.get("type");
-
-        const titleMap = {
-          profit_loss: "PROFIT LOSS[KINGTEST]",
-          ac_statement: "ACCOUNT STATEMENT[KINGTEST]",
-          chip_stmt_new: "CHIP STMT NEW REPORT",
-          chip_summery: "CHIP SUMMERY REPORT",
-          settl_report_new: "SETTL. REPORT NEW REPORT",
-          sport_summery: "SPORT SUMMERY REPORT",
-          top_clients: "TOP CLIENTS REPORT",
-          week_report: "WEEK-REPORT",
-          balance_sheet: "BALANCE SHEET REPORT",
-          export: "EXPORT REPORT",
-        };
-
-                const containerMap = {
-          ac_statement: "ac-statement-container",
-          chip_stmt_new: "chip-stmt-container",
-          chip_summery: "chip-summery-container",
-          settl_report_new: "settl-report-container",
-          sport_summery: "sport-summery-container",
-          top_clients: "top-clients-container",
-          week_report: "week-report-container",
-          balance_sheet: "balance-sheet-container",
-          export: "export-container"
-        };
-        
-        const allContainers = ["profit-loss-container", ...Object.values(containerMap)];
-        allContainers.forEach(c => $("#" + c).hide());
-
-        if (type && containerMap[type]) {
-           $("#" + containerMap[type]).show();
-           if (type === 'profit_loss') {
-              $("#page-title").show().text(titleMap.profit_loss);
-           } else {
-              $("#page-title").hide();
-           }
-        } else {
-           $("#profit-loss-container").show();
-           $("#page-title").show().text(titleMap.profit_loss);
-        }
-        
-        $('select:not(.browser-default)').formSelect();
-        $('.collapsible').collapsible();
-      });
-    </script>
-  </body>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

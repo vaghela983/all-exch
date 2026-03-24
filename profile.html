@@ -1,466 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Allexchbet</title>
-    <!-- Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="deshboard.css" />
-    <style>
-      .profile-container {
-        padding: 20px;
-      }
-      .profile-card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        overflow: hidden;
-      }
-      .profile-card-header {
-        background: var(--teal-primary);
-        color: white;
-        padding: 12px 15px;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 14px;
-      }
-      .profile-card-body {
-        padding: 15px;
-      }
-      .profile-info-row {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0;
-        border-bottom: 1px solid #f0f0f0;
-        font-size: 13px;
-      }
-      .profile-info-row:last-child {
-        border-bottom: none;
-      }
-      .info-label {
-        color: #777;
-        font-weight: 500;
-      }
-      .info-value {
-        color: #333;
-        font-weight: bold;
-      }
-      .status-badge {
-        background: #4caf50;
-        color: white;
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 11px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header Navigation -->
-        <header style="background: white; border-bottom: 2px solid #ccc;">
-      <!-- Row 1: Balances & Hamburger -->
-      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
-          <div style="display: flex; align-items: center;">
-             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
-                 <i class="material-icons">menu</i>
-             </a>
-             <div>BL : <span style="color: #4caf50;">5000</span></div>
-          </div>
-          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
-      </div>
-      <!-- Row 2: Central Logo -->
-      <div style="text-align: center; padding: 5px 0;">
-          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
-      </div>
-      <!-- Row 3: Marquee -->
-      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
-          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
-              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
-          </div>
-      </div>
-    </header>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
 
     <!-- Sidebar -->
-    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
-      <li class="logo-container center-align">
-        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
-      </li>
-      <li>
-        <a href="deshboard.html" class="waves-effect waves-light"
-          ><img src="Assets/Deshboard/home.svg" /> HOME</a
-        >
-      </li>
-      <li>
-        <a href="multi_market.html" class="waves-effect waves-light"
-          ><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a
-        >
-      </li>
-      <li>
-        <a href="market_analysis.html" class="waves-effect waves-light"
-          ><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a
-        >
-      </li>
-
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <!-- USERS LIST -->
-          <li>
-            <a class="collapsible-header waves-effect"
-              ><i
-                class="material-icons white-text"
-                style="font-size: 18px; margin-right: 12px"
-                >people</i
-              >
-              USERS LIST<i
-                class="material-icons right white-text"
-                style="font-size: 16px"
-                >arrow_drop_down</i
-              ></a
-            >
-            <div class="collapsible-body">
-              <ul>
-                <li>
-                  <a href="user_list.html?role=my_child" class="waves-effect waves-light"
-                    ><span class="sidebar-letter-icon">A</span> MY CHILD</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="user_list.html?role=super_master"
-                    class="waves-effect waves-light"
-                    ><span class="sidebar-letter-icon">S</span> SUPER MASTER</a
-                  >
-                </li>
-                <li>
-                  <a href="user_list.html?role=master" class="waves-effect waves-light"
-                    ><span class="sidebar-letter-icon">M</span> MASTER</a
-                  >
-                </li>
-                <li>
-                  <a href="user_list.html?role=client" class="waves-effect waves-light"
-                    ><span class="sidebar-letter-icon">C</span> CLIENT</a
-                  >
-                </li>
-                <li>
-                  <a href="user_list.html?role=blocked" class="waves-effect waves-light"
-                    ><span class="sidebar-letter-icon">A</span> BLOCKED USERS</a
-                  >
-                </li>
-              </ul>
+    <div id="sidebar">
+        <div class="sidebar-logo">
+            <img src="Assets/Deshboard/logo2.png" alt="Allexchbet">
+        </div>
+        <div class="nav-menu">
+            <a href="deshboard.html" class="nav-item"><i class="fa fa-home"></i> HOME</a>
+            <a href="multi_market.html" class="nav-item"><i class="fa fa-star"></i> MULTI MARKET</a>
+            <a href="market_analysis.html" class="nav-item"><i class="fa fa-chart-line"></i> MARKET ANALYSIS</a>
+            <a href="#usersListSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
+                <i class="fa fa-users"></i> USERS LIST <i class="fa fa-chevron-down ms-auto font-11"></i>
+            </a>
+            <div class="collapse" id="usersListSubmenu">
+                <div class="submenu">
+                    <a href="user_list.html?role=my_child" class="submenu-item">MY CHILD</a>
+                    <a href="user_list.html?role=super_master" class="submenu-item">SUPER MASTER</a>
+                    <a href="user_list.html?role=master" class="submenu-item">MASTER</a>
+                    <a href="user_list.html?role=client" class="submenu-item">CLIENT</a>
+                    <a href="user_list.html?role=blocked" class="submenu-item">BLOCKED USERS</a>
+                </div>
             </div>
-          </li>
-          <!-- CREATE NEW -->
-          <li>
-            <a class="collapsible-header waves-effect"
-              ><i
-                class="material-icons white-text"
-                style="font-size: 18px; margin-right: 12px"
-                >add_circle_outline</i
-              >
-              CREATE NEW<i
-                class="material-icons right white-text"
-                style="font-size: 16px"
-                >arrow_drop_down</i
-              ></a
-            >
-            <div class="collapsible-body">
-              <ul>
-                <li>
-                  <a href="create_user.html?role=new_super" class="waves-effect"
-                    ><span class="sidebar-letter-icon">S</span> NEW SUPER</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="create_user.html?role=new_master"
-                    class="waves-effect"
-                    ><span class="sidebar-letter-icon">M</span> NEW MASTER</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="create_user.html?role=new_client"
-                    class="waves-effect"
-                    ><span class="sidebar-letter-icon">C</span> NEW CLIENT</a
-                  >
-                </li>
-              </ul>
+            
+            <a href="#createNewSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
+                <i class="fa fa-plus-circle"></i> CREATE NEW <i class="fa fa-chevron-down ms-auto font-11"></i>
+            </a>
+            <div class="collapse" id="createNewSubmenu">
+                <div class="submenu">
+                    <a href="create_user.html?role=new_super" class="submenu-item">NEW SUPER</a>
+                    <a href="create_user.html?role=new_master" class="submenu-item">NEW MASTER</a>
+                    <a href="create_user.html?role=new_client" class="submenu-item">NEW CLIENT</a>
+                </div>
             </div>
-          </li>
-          <!-- BETS -->
-          <li>
-            <a class="collapsible-header waves-effect"
-              ><img src="Assets/Deshboard/bets.svg" /> BETS<i
-                class="material-icons right white-text"
-                style="font-size: 16px"
-                >arrow_drop_down</i
-              ></a
-            >
-            <div class="collapsible-body">
-              <ul>
-                <li>
-                  <a href="bets.html?status=unsettled" class="waves-effect"
-                    >UNSETTLED</a
-                  >
-                </li>
-                <li>
-                  <a href="bets.html?status=casino_pending" class="waves-effect"
-                    >CASINO1 PENDING</a
-                  >
-                </li>
-              </ul>
+
+            <a href="#betsSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
+                <i class="fa fa-dice"></i> BETS <i class="fa fa-chevron-down ms-auto font-11"></i>
+            </a>
+            <div class="collapse" id="betsSubmenu">
+                <div class="submenu">
+                    <a href="bets.html?status=unsettled" class="submenu-item">UNSETTLED</a>
+                    <a href="bets.html?status=casino_pending" class="submenu-item">CASINO1 PENDING</a>
+                </div>
             </div>
-          </li>
-        </ul>
-      </li>
 
-      <li>
-        <a href="settlement.html" class="waves-effect"
-          ><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT - NEW</a
-        >
-      </li>
-
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <!-- REPORTS -->
-          <li>
-            <a class="collapsible-header waves-effect"
-              ><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i
-                class="material-icons right white-text"
-                style="font-size: 16px"
-                >arrow_drop_down</i
-              ></a
-            >
-            <div class="collapsible-body">
-              <ul>
-                <li>
-                  <a href="reports.html?type=profit_loss" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/profitloss.svg"
-                      class="submenu-svg-icon"
-                    />
-                    PROFIT LOSS</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=ac_statement" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/statement.svg"
-                      class="submenu-svg-icon"
-                      style="filter: brightness(0.9)"
-                    />
-                    A/C STATEMENT</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=chip_stmt_new" class="waves-effect"
-                    ><i
-                      class="material-icons"
-                      style="font-size: 20px; margin-right: 12px; color: #777"
-                      >payments</i
-                    >
-                    CHIP STMT NEW</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=chip_summery" class="waves-effect"
-                    ><i
-                      class="material-icons"
-                      style="font-size: 20px; margin-right: 12px; color: #777"
-                      >pie_chart</i
-                    >
-                    CHIP SUMMERY</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="reports.html?type=settl_report_new"
-                    class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/statement.svg"
-                      class="submenu-svg-icon"
-                    />
-                    SETTL. REPORT NEW</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=sport_summery" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/profitloss.svg"
-                      class="submenu-svg-icon"
-                    />
-                    SPORT SUMMERY</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=top_clients" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/profitloss.svg"
-                      class="submenu-svg-icon"
-                    />
-                    TOP CLINETS</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=week_report" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/profitloss.svg"
-                      class="submenu-svg-icon"
-                    />
-                    WEEK-REPORT</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=balance_sheet" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/statement.svg"
-                      class="submenu-svg-icon"
-                    />
-                    BALANCE SHEET</a
-                  >
-                </li>
-                <li>
-                  <a href="reports.html?type=export" class="waves-effect"
-                    ><img
-                      src="Assets/Deshboard/profitloss.svg"
-                      class="submenu-svg-icon"
-                    />
-                    EXPORT</a
-                  >
-                </li>
-              </ul>
+            <a href="settlement.html" class="nav-item"><i class="fa fa-arrows-spin"></i> SETTLEMENT -NEW</a>
+            
+            <a href="#reportsSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
+                <i class="fa fa-chart-bar"></i> REPORTS <i class="fa fa-chevron-down ms-auto font-11"></i>
+            </a>
+            <div class="collapse" id="reportsSubmenu">
+                <div class="submenu">
+                    <a href="reports.html?type=profit_loss" class="submenu-item">PROFIT LOSS</a>
+                    <a href="ac_statement.html" class="submenu-item">A/C STATEMENT</a>
+                    <a href="chip_stmt_new.html" class="submenu-item">CHIP STMT NEW</a>
+                    <a href="chip_summery.html" class="submenu-item">CHIP SUMMERY</a>
+                    <a href="settl_report_new.html" class="submenu-item">SETTL. REPORT NEW</a>
+                    <a href="sport_summery.html" class="submenu-item">SPORT SUMMERY</a>
+                    <a href="top_clients.html" class="submenu-item">TOP CLINETS</a>
+                    <a href="week_report.html" class="submenu-item">WEEK-REPORT</a>
+                    <a href="balance_sheet.html" class="submenu-item">BALANCE SHEET</a>
+                    <a href="export.html" class="submenu-item">EXPORT</a>
+                </div>
             </div>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="download_apk.html" class="waves-effect"
-          ><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a
-        >
-      </li>
-      <li>
-        <a href="terms.html" class="waves-effect"
-          ><img src="Assets/Deshboard/terms.svg" /> T & C</a
-        >
-      </li>
-      <li>
-        <a href="rules.html" class="waves-effect"
-          ><img src="Assets/Deshboard/terms.svg" /> RULES</a
-        >
-      </li>
-      <li>
-        <a href="profile.html" class="waves-effect active-nav"
-          ><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a
-        >
-      </li>
-      <li>
-        <a href="change_password.html" class="waves-effect"
-          ><img src="Assets/Deshboard/edit.svg" /> CHANGE PASSWORD (KINGTEST)</a
-        >
-      </li>
-      <li>
-        <a href="index.html" class="waves-effect logout-btn"
-          ><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a
-        >
-      </li>
-    </ul>
+            
+            <a href="download_apk.html" class="nav-item"><i class="fa fa-mobile-screen"></i> DOWNLOAD APK</a>
+            <a href="terms.html" class="nav-item"><i class="fa fa-file-lines"></i> T & C</a>
+            <a href="rules.html" class="nav-item"><i class="fa fa-gavel"></i> RULES</a>
+            <a href="profile.html" class="nav-item active"><i class="fa fa-user-circle"></i> PROFILE (KINGTEST)</a>
+            <a href="change_password.html" class="nav-item"><i class="fa fa-user-pen"></i> CHANGE PASSWORD (KINGTEST)</a>
+            <a href="index.html" class="nav-item"><i class="fa fa-right-from-bracket"></i> LOGOUT</a>
+        </div>
+    </div>
 
     <!-- Main Content -->
-    <main>
-      <div
-        style="
-          background-color: var(--teal-primary);
-          color: white;
-          padding: 10px;
-          text-align: center;
-          font-weight: bold;
-          font-size: 16px;
-          text-transform: uppercase;
-        "
-      >
-        USER PROFILE
-      </div>
-
-      <div class="profile-container">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="profile-card">
-              <div class="profile-card-header">Personal Details</div>
-              <div class="profile-card-body">
-                <div class="profile-info-row">
-                  <span class="info-label">Name</span>
-                  <span class="info-value">KINGTEST</span>
-                </div>
-                <div class="profile-info-row">
-                  <span class="info-label">Username</span>
-                  <span class="info-value">kingtest</span>
-                </div>
-                <div class="profile-info-row">
-                  <span class="info-label">Mobile</span>
-                  <span class="info-value">+91 9876543210</span>
-                </div>
-              </div>
+    <div id="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar position-relative">
+            <div class="balance-info">
+                B.. : <span class="text-success">5000</span>
             </div>
-          </div>
-
-          <div class="col s12 m6">
-            <div class="profile-card">
-              <div class="profile-card-header">Account Status</div>
-              <div class="profile-card-body">
-                <div class="profile-info-row">
-                  <span class="info-label">User Role</span>
-                  <span class="info-value">MASTER</span>
-                </div>
-                <div class="profile-info-row">
-                  <span class="info-label">Status</span>
-                  <span class="status-badge">ACTIVE</span>
-                </div>
-                <div class="profile-info-row">
-                  <span class="info-label">Created At</span>
-                  <span class="info-value">2026-03-01 10:00 AM</span>
-                </div>
-              </div>
+            <div class="pl-info fw-bold position-absolute start-50 translate-middle-x">
+                <span class="text-dark">PL : 37.20</span>
             </div>
-          </div>
         </div>
 
-        <div class="row">
-          <div class="col s12">
-            <div class="profile-card">
-              <div class="profile-card-header">Financial Summary</div>
-              <div class="profile-card-body">
-                <div class="profile-info-row">
-                  <span class="info-label">Credit Limit</span>
-                  <span class="info-value">5,000.00</span>
-                </div>
-                <div class="profile-info-row">
-                  <span class="info-label">Available Balance</span>
-                  <span class="info-value" style="color: green">5,000.00</span>
-                </div>
-                <div class="profile-info-row">
-                  <span class="info-label">Total Exposure</span>
-                  <span class="info-value" style="color: red">0.00</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Dynamic Title Section -->
+        <div class="page-title-box">
+            <h1 class="page-title">PROFILE</h1>
         </div>
-      </div>
-    </main>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="deshboard.js"></script>
-  </body>
+        <!-- Marquee Ticker -->
+        <div class="ticker-marquee">
+            <p>CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.</p>
+        </div>
+
+        <!-- Profile Detail Section -->
+        <div class="profile-container p-3">
+            <div class="user-details-card shadow-sm">
+                <div class="user-details-header">
+                    USER DETAILS
+                </div>
+                <div class="user-details-body">
+                    <div class="detail-row">
+                        <i class="fa-solid fa-face-smile"></i> Name : Kingtest
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-user"></i> Username : Kingtest
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-regular fa-credit-card"></i> Free Chip : 5000
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-dollar-sign"></i> P/L : 37.20
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-chart-line"></i> Expose : 0.00
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Cricket Client Share : 93
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Football Client Share : 93
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Tennis Client Share : 93
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Horse Client Share : 93
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Greyhound Client Share : 93
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Greyhound Client Share : 93
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> Casino1 Client Share : 91
+                    </div>
+                    <div class="detail-row">
+                        <i class="fa-solid fa-users"></i> ICasino Client Share : 91
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

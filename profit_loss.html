@@ -1,0 +1,109 @@
+<!-- Template-like content for Profit Loss -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Loss - Allexchbet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="sidebar-logo">
+            <img src="Assets/Deshboard/logo2.png" alt="Allexchbet">
+        </div>
+        <div class="nav-menu">
+            <a href="#" class="nav-item"><i class="fa fa-home"></i> Home</a>
+            <a href="#" class="nav-item"><i class="fa fa-star"></i> Multi Market</a>
+            <a href="#" class="nav-item"><i class="fa fa-chart-line"></i> Market Analysis</a>
+            <a href="#" class="nav-item"><i class="fa fa-users"></i> Users List</a>
+            <a href="#" class="nav-item"><i class="fa fa-plus-circle"></i> Create New</a>
+            <a href="#" class="nav-item"><i class="fa fa-dice"></i> Bets</a>
+            <a href="#" class="nav-item"><i class="fa fa-arrows-spin"></i> Settlement -New</a>
+            <a href="#reportsSubmenu" class="nav-item" data-bs-toggle="collapse">
+                <i class="fa fa-chart-bar"></i> Reports
+            </a>
+            <div class="collapse show" id="reportsSubmenu">
+                <div class="submenu">
+                    <a href="profit_loss.html" class="submenu-item active">Profit Loss</a>
+                    <a href="ac_statement.html" class="submenu-item">A/C Statement</a>
+                    <a href="chip_stmt_new.html" class="submenu-item">Chip Stmt New</a>
+                    <a href="chip_summery.html" class="submenu-item">Chip Summery</a>
+                    <a href="settl_report_new.html" class="submenu-item">Settl. Report New</a>
+                    <a href="sport_summery.html" class="submenu-item">Sport Summery</a>
+                </div>
+            </div>
+            <a href="#" class="nav-item"><i class="fa fa-mobile-screen"></i> Download APK</a>
+            <a href="#" class="nav-item"><i class="fa fa-file-lines"></i> T & C</a>
+            <a href="#" class="nav-item"><i class="fa fa-gavel"></i> Rules</a>
+            <a href="#" class="nav-item"><i class="fa fa-user-circle"></i> Profile (Kingtest)</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="top-bar">
+            <div class="balance-info">BL : <span class="text-success">5000</span></div>
+            <div class="pl-info">PL : <span class="text-dark">37.20</span></div>
+        </div>
+        <div class="page-title-box">
+            <h1 class="page-title">PROFIT LOSS[KINGTEST]</h1>
+        </div>
+        <div class="ticker-marquee">
+            <p>ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.</p>
+        </div>
+        <div class="filter-section">
+            <div class="row align-items-end g-2">
+                <div class="col-lg-4 col-md-6">
+                    <label class="filter-label">SPORT</label>
+                    <select class="form-select form-select-sm">
+                        <option>All</option>
+                        <option selected>Cricket</option>
+                        <option>Football</option>
+                        <option>Tennis</option>
+                        <option>Horse Racing</option>
+                        <option>Greyhound Racing</option>
+                        <option>Kabaddi</option>
+                        <option>Politics</option>
+                        <option>Live Casino</option>
+                        <option>iCasino</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-3">
+                    <button class="btn btn-dark-custom w-100 py-1">DATE</button>
+                </div>
+                <div class="col-lg-4 col-md-3">
+                    <button class="btn btn-dark-custom w-100 py-1">SEARCH</button>
+                </div>
+            </div>
+        </div>
+        <div class="table-container mt-2">
+            <table class="ac_statement_table">
+                <thead>
+                    <tr>
+                        <th width="50">NO</th>
+                        <th>EVENT</th>
+                        <th>COMM IN</th>
+                        <th>COMM OUT</th>
+                        <th>AMOUNT</th>
+                        <th>TOTAL</th>
+                        <th width="100">INFO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="total-row">
+                        <td>#</td><td>Grand Total</td><td></td><td></td><td></td><td class="text-red">0</td><td></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>#</td><td>Page Total</td><td></td><td></td><td></td><td class="text-red">0</td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
