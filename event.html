@@ -121,7 +121,7 @@
       </ul>
     </li>
     <li id="dash_dashboard">
-      <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD
+      <a href="#" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD
         APK</a>
     </li>
     <li id="dash_dashboard">
@@ -166,11 +166,13 @@
       <!-- Market/Live Tabs -->
       <div class="match-tabs" style="margin-bottom: 10px;">
         <div class="match-tab active" onclick="switchTab('market')" id="tab-market">
-          <img src="https://allexchbet.com/allexchbet.com/images/profitloss.svg" style="height: 18px; margin-bottom: 4px;" alt="Market">
+          <img src="https://allexchbet.com/allexchbet.com/images/profitloss.svg"
+            style="height: 18px; margin-bottom: 4px;" alt="Market">
           MARKET
         </div>
         <div class="match-tab" onclick="switchTab('live')" id="tab-live">
-          <img src="https://allexchbet.com/allexchbet.com/images/tv-white.svg" style="height: 18px; margin-bottom: 4px;" alt="Live">
+          <img src="https://allexchbet.com/allexchbet.com/images/tv-white.svg" style="height: 18px; margin-bottom: 4px;"
+            alt="Live">
           LIVE
         </div>
       </div>
@@ -185,29 +187,37 @@
         <!-- LEFT COLUMN: Scores and Odds -->
         <div class="detail-left">
           <!-- Live Video Area (Hidden by default, shown when LIVE tab active) -->
-          <div id="live-area" style="display: none; background: #000; height: 350px; margin-bottom: 10px; position: relative;">
+          <div id="live-area"
+            style="display: none; background: #000; height: 350px; margin-bottom: 10px; position: relative;">
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                 <div class="preloader-wrapper small active">
-                    <div class="spinner-layer spinner-blue-only">
-                      <div class="circle-clipper left"><div class="circle"></div></div>
-                      <div class="gap-patch"><div class="circle"></div></div>
-                      <div class="circle-clipper right"><div class="circle"></div></div>
-                    </div>
+              <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-blue-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
                   </div>
+                  <div class="gap-patch">
+                    <div class="circle"></div>
+                  </div>
+                  <div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Scoreboard -->
           <div class="scoreboard-wrap">
             <div class="sb-left">
-               <div style="display: flex; align-items: center;">Yasutaka Uchiyama <span style="margin-left: 5px; color: #4caf50;">●</span></div>
-               <div>Dan Added</div>
-               <div style="font-size: 10px; color: #aaa; margin-top: 5px;">Set 1</div>
+              <div style="display: flex; align-items: center;">Yasutaka Uchiyama <span
+                  style="margin-left: 5px; color: #4caf50;">●</span></div>
+              <div>Dan Added</div>
+              <div style="font-size: 10px; color: #aaa; margin-top: 5px;">Set 1</div>
             </div>
             <div class="sb-right">
-                <div class="sb-score-row"><span>5</span> <span>0</span></div>
-                <div class="sb-score-row"><span>2</span> <span>0</span></div>
-                <div class="sb-score-row sb-points"><span>1</span> <span>POINT</span></div>
+              <div class="sb-score-row"><span>5</span> <span>0</span></div>
+              <div class="sb-score-row"><span>2</span> <span>0</span></div>
+              <div class="sb-score-row sb-points"><span>1</span> <span>POINT</span></div>
             </div>
           </div>
 
@@ -217,9 +227,11 @@
               <i class="material-icons">star</i>
               MATCH ODDS
               <div class="orange-badge" style="margin-left: 10px;">B</div>
-              <div class="orange-badge" style="background: #000;"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+              <div class="orange-badge" style="background: #000;"><i class="material-icons"
+                  style="font-size: 12px;">settings</i></div>
               <div class="odds-header-right">
-                <img src="Assets/Deshboard/multi.svg" style="height: 14px; margin-right: 25px; filter: brightness(100);" />
+                <img src="Assets/Deshboard/multi.svg"
+                  style="height: 14px; margin-right: 25px; filter: brightness(100);" />
                 <div class="odds-header-box">BACK</div>
                 <div class="odds-header-box">LAY</div>
               </div>
@@ -332,19 +344,19 @@
     });
 
     function switchTab(type) {
-        const marketTab = document.getElementById('tab-market');
-        const liveTab = document.getElementById('tab-live');
-        const liveArea = document.getElementById('live-area');
+      const marketTab = document.getElementById('tab-market');
+      const liveTab = document.getElementById('tab-live');
+      const liveArea = document.getElementById('live-area');
 
-        if(type === 'market') {
-            marketTab.classList.add('active');
-            liveTab.classList.remove('active');
-            liveArea.style.display = 'none';
-        } else {
-            liveTab.classList.add('active');
-            marketTab.classList.remove('active');
-            liveArea.style.display = 'block';
-        }
+      if (type === 'market') {
+        marketTab.classList.add('active');
+        liveTab.classList.remove('active');
+        liveArea.style.display = 'none';
+      } else {
+        liveTab.classList.add('active');
+        marketTab.classList.remove('active');
+        liveArea.style.display = 'block';
+      }
     }
   </script>
 </body>
