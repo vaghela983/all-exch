@@ -108,7 +108,7 @@ body {
 
 /* Main Layout */
 .main-wrapper {
-  margin-left: 260px;
+  margin-left: 0;
   min-height: 100vh;
 }
 
@@ -247,10 +247,11 @@ body {
 }
 
 /* Green Table Specific Styles */
-.green-table thead,
-.green-total-row {
-  background: #00a82d;
-  color: white;
+.green-table thead th,
+.green-total-row,
+.green-total-row td {
+  background: #00a82d !important;
+  color: white !important;
 }
 
 .green-value {
@@ -258,10 +259,11 @@ body {
 }
 
 /* Red Table Specific Styles */
-.red-table thead,
-.red-total-row {
-  background: #b71c1c;
-  color: white;
+.red-table thead th,
+.red-total-row,
+.red-total-row td {
+  background: #b71c1c !important;
+  color: white !important;
 }
 
 .red-value {
@@ -384,5 +386,5 @@ body {
 }
 
 .table-wrapper-half {
-  min-width: 50% !important;
+  flex: 1 !important;
 }

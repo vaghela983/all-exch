@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details - Allexchbet</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="deshboard.css">
+  <link rel="stylesheet" href="multi_market.css">
+  <link rel="stylesheet" href="reports.css">
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+    <li class="logo-container center-align">
+      <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+    </li>
+    <li id="dash_dashboard">
+      <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" />
+        HOME</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI
+        MARKET</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" />
+        MARKET ANALYSIS</a>
+    </li>
+    <li class="no-padding" id="dash_dashboard">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+              src="https://allexchbet.com/allexchbet.com/images/users.svg">people</i>
+            USERS LIST</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+              <li>
+                <a href="user_list.html?role=super_master">SUPER MASTER</a>
+              </li>
+              <li><a href="user_list.html?role=master">MASTER</a></li>
+              <li><a href="user_list.html?role=client">CLIENT</a></li>
+              <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+              src="https://allexchbet.com/allexchbet.com/images/users.svg">
+            CREATE NEW</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+              <li>
+                <a href="create_user.html?role=new_master">NEW MASTER</a>
+              </li>
+              <li>
+                <a href="create_user.html?role=new_client">NEW CLIENT</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/bets.svg" /> BETS</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+              <li>
+                <a href="bets.html?status=casino_pending">CASINO1 PENDING</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li id="dash_dashboard">
+      <a href="settlement.html" class="waves-effect waves-light"><img class="menu-icon"
+          src="https://allexchbet.com/allexchbet.com/images/chip-summery.svg"> SETTLEMENT
+        -NEW</a>
+    </li>
+    <li class="no-padding" id="dash_dashboard">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" />
+            REPORTS</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
+              <li>
+                <a href="reports.html?type=ac_statement">A/C STATEMENT</a>
+              </li>
+              <li>
+                <a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a>
+              </li>
+              <li>
+                <a href="reports.html?type=chip_summery">CHIP SUMMERY</a>
+              </li>
+              <li>
+                <a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a>
+              </li>
+              <li>
+                <a href="reports.html?type=sport_summery">SPORT SUMMERY</a>
+              </li>
+              <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
+              <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
+              <li>
+                <a href="reports.html?type=balance_sheet">BALANCE SHEET</a>
+              </li>
+              <li><a href="reports.html?type=export">EXPORT</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li id="dash_dashboard">
+      <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD
+        APK</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="rules.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+    </li>
+    <li class="profile-bottom" id="dash_dashboard">
+      <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE
+        (KINGTEST)</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> CHANGE
+        PASSWORD (KINGTEST)</a>
+    </li>
+    <li id="dash_dashboard">
+      <a href="index.html" class="waves-effect logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+    </li>
+  </ul>
+
+  <div id="main-content">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div style="display: flex; align-items: center;">
+        <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"
+          style="color: #000; margin-right: 10px; display: inline-flex;">
+          <i class="material-icons">menu</i>
+        </a>
+        <div class="balance-info">BL : <span class="text-success">5000</span></div>
+      </div>
+      <div class="pl-info">PL : <span class="text-dark">37.20</span></div>
+    </div>
+
+    <!-- Ticker -->
+    <div class="ticker-marquee">
+      <p>CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT
+        CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.</p>
+    </div>
+
+    <div class="match-detail-wrap">
+      <!-- Market/Live Tabs -->
+      <div class="match-tabs" style="margin-bottom: 10px;">
+        <div class="match-tab active" onclick="switchTab('market')" id="tab-market">
+          <img src="https://allexchbet.com/allexchbet.com/images/profitloss.svg" style="height: 18px; margin-bottom: 4px;" alt="Market">
+          MARKET
+        </div>
+        <div class="match-tab" onclick="switchTab('live')" id="tab-live">
+          <img src="https://allexchbet.com/allexchbet.com/images/tv-white.svg" style="height: 18px; margin-bottom: 4px;" alt="Live">
+          LIVE
+        </div>
+      </div>
+
+      <!-- P/L Summary Header -->
+      <div class="scores-row" style="background: transparent; border-bottom: 1px solid #eee; padding: 10px 15px;">
+        <div style="font-weight: 800; color: #ff0000;">Yasutaka Uchiyama : -669.60</div>
+        <div style="font-weight: 800; color: #00B300;">Dan Added : 2604.00</div>
+      </div>
+
+      <div class="detail-row">
+        <!-- LEFT COLUMN: Scores and Odds -->
+        <div class="detail-left">
+          <!-- Live Video Area (Hidden by default, shown when LIVE tab active) -->
+          <div id="live-area" style="display: none; background: #000; height: 350px; margin-bottom: 10px; position: relative;">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                 <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left"><div class="circle"></div></div>
+                      <div class="gap-patch"><div class="circle"></div></div>
+                      <div class="circle-clipper right"><div class="circle"></div></div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+          <!-- Scoreboard -->
+          <div class="scoreboard-wrap">
+            <div class="sb-left">
+               <div style="display: flex; align-items: center;">Yasutaka Uchiyama <span style="margin-left: 5px; color: #4caf50;">●</span></div>
+               <div>Dan Added</div>
+               <div style="font-size: 10px; color: #aaa; margin-top: 5px;">Set 1</div>
+            </div>
+            <div class="sb-right">
+                <div class="sb-score-row"><span>5</span> <span>0</span></div>
+                <div class="sb-score-row"><span>2</span> <span>0</span></div>
+                <div class="sb-score-row sb-points"><span>1</span> <span>POINT</span></div>
+            </div>
+          </div>
+
+          <!-- MATCH ODDS -->
+          <div class="odds-section" style="width: 100%;">
+            <div class="odds-header">
+              <i class="material-icons">star</i>
+              MATCH ODDS
+              <div class="orange-badge" style="margin-left: 10px;">B</div>
+              <div class="orange-badge" style="background: #000;"><i class="material-icons" style="font-size: 12px;">settings</i></div>
+              <div class="odds-header-right">
+                <img src="Assets/Deshboard/multi.svg" style="height: 14px; margin-right: 25px; filter: brightness(100);" />
+                <div class="odds-header-box">BACK</div>
+                <div class="odds-header-box">LAY</div>
+              </div>
+            </div>
+            <div class="odds-row">
+              <div class="runner-name">
+                Yasutaka Uchiyama
+                <span class="profit-loss text-red">-669.60 (0.26)</span>
+              </div>
+              <div class="odds-boxes-wrap">
+                <div class="odds-box box-back">
+                  <span class="main-odd">1.26</span>
+                  <span class="sub-odd">212367</span>
+                </div>
+                <div class="odds-box box-lay">
+                  <span class="main-odd">1.28</span>
+                  <span class="sub-odd">127911</span>
+                </div>
+              </div>
+            </div>
+            <div class="odds-row">
+              <div class="runner-name">
+                Dan Added
+                <span class="profit-loss text-green">2604.00 (3.89)</span>
+              </div>
+              <div class="odds-boxes-wrap">
+                <div class="odds-box box-back">
+                  <span class="main-odd">4.6</span>
+                  <span class="sub-odd">2733</span>
+                </div>
+                <div class="odds-box box-lay">
+                  <span class="main-odd">4.8</span>
+                  <span class="sub-odd">1554</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Betting Summary -->
+        <div class="detail-right">
+          <div class="search-bar-wrap">
+            <input type="text" class="search-input" placeholder="Username">
+            <button class="search-btn">SEARCH</button>
+          </div>
+
+          <div class="matched-tabs">
+            <div class="m-tab active">MATCHED</div>
+            <div class="m-tab">UN-MATCHED</div>
+          </div>
+
+          <table class="side-table">
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Runner</th>
+                <th>Rate</th>
+                <th>Stake</th>
+                <th>Profit/Loss</th>
+                <th>Time/Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bet-row-lay">
+                <td>Kingtest2</td>
+                <td>Dan Added</td>
+                <td>4.80</td>
+                <td>1000.00</td>
+                <td>3800.00</td>
+                <td style="font-size: 9px;">25/03/2026 06:25:32 PM</td>
+              </tr>
+              <tr class="bet-row-lay">
+                <td>Kingtest2</td>
+                <td>Yasutaka Uchiyama</td>
+                <td>1.28</td>
+                <td>1000.00</td>
+                <td>280.00</td>
+                <td style="font-size: 9px;">25/03/2026 06:25:17 PM</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="table-title">Fancy Bet List</div>
+          <table class="side-table">
+            <thead>
+              <tr>
+                <th>Client</th>
+                <th>Runner</th>
+                <th>Run</th>
+                <th>Stake</th>
+                <th>Profit/Loss</th>
+                <th>Time/Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Empty -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+      $('.collapsible').collapsible();
+    });
+
+    function switchTab(type) {
+        const marketTab = document.getElementById('tab-market');
+        const liveTab = document.getElementById('tab-live');
+        const liveArea = document.getElementById('live-area');
+
+        if(type === 'market') {
+            marketTab.classList.add('active');
+            liveTab.classList.remove('active');
+            liveArea.style.display = 'none';
+        } else {
+            liveTab.classList.add('active');
+            marketTab.classList.remove('active');
+            liveArea.style.display = 'block';
+        }
+    }
+  </script>
+</body>
+
+</html>

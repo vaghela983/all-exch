@@ -117,7 +117,7 @@ $(document).ready(function () {
                         const timeStr = date.toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }) + " " + date.toLocaleTimeString("en-US", { hour12: true, hour: "2-digit", minute: "2-digit", second: "2-digit" }).toUpperCase();
                         html += `
                         <div class="event-row" style="display: flex; align-items: center; padding: 6px 15px; border-bottom: 1px solid #ddd; background: #fff;">
-                            <div class="event-info-left" onclick="window.location.href='multi_market.html?id=${event.id}'" style="cursor: pointer; display: flex; align-items: center; flex: 1;">
+                            <div class="event-info-left" onclick="window.location.href='event.html?id=${event.id}'" style="cursor: pointer; display: flex; align-items: center; flex: 1;">
                                <i class="material-icons active">
                         lock_open
                         </i>

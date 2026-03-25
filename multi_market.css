@@ -27,23 +27,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 25px;
-    background: white;
+    width: 100px;
+    height: 48px;
+    background: transparent;
     cursor: pointer;
     border-bottom: 2px solid transparent;
-    min-width: 100px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .match-tab.active {
-    background: #0b4a4d;
+    background: #0a6568;
     color: white;
 }
 
 .match-tab:not(.active) {
-    color: #0b4a4d;
+    background: transparent;
+    color: #0a6568;
+    border: 1px solid #ccc;
 }
 
-.match-tab i, .match-tab img {
+.match-tab i,
+.match-tab img {
     margin-bottom: 5px;
     height: 20px;
     width: 20px;
@@ -58,21 +63,23 @@ body {
 }
 
 .match-tab.active img {
-    filter: brightness(0) invert(1) !important;
+    /* filter: brightness(0) invert(1) !important; */
 }
 
 .match-tab:not(.active) img {
-    filter: invert(15%) sepia(21%) saturate(2206%) hue-rotate(159deg) brightness(88%) contrast(90%) !important; /* Approximation for #0b4a4d */
+    /* filter: invert(15%) sepia(21%) saturate(2206%) hue-rotate(159deg) brightness(88%) contrast(90%) !important; */
+    /* Approximation for #0b4a4d */
 }
 
-/* Scores Row */
 .scores-row {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;
+    background: transparent;
 }
 
 .score-green {
@@ -80,35 +87,39 @@ body {
     font-weight: 900;
 }
 
-/* Tracker */
-.tracker-wrap {
-    position: relative;
-    background: #000;
-    height: 200px;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.tracker-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-}
-
-.tracker-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+.scoreboard-wrap {
+    background: #222;
     color: white;
-    padding: 5px 15px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.sb-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sb-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    color: #00B300;
+}
+
+.sb-score-row {
+    display: flex;
+    gap: 15px;
+    font-weight: 800;
+}
+
+.sb-points {
+    color: #00B300;
+    font-size: 12px;
 }
 
 /* Main Layout Grid */
@@ -119,11 +130,11 @@ body {
 
 .detail-left {
     flex: 1;
-    min-width: 65%;
+    min-width: 61%;
 }
 
 .detail-right {
-    flex: 0 0 32%;
+    flex: 0 0 38%;
     min-width: 300px;
 }
 
@@ -132,16 +143,36 @@ body {
     background: white;
     margin-bottom: 15px;
     border: 1px solid #ddd;
+    width: 50%;
 }
 
 .odds-header {
-    background: #0b4a4d;
-    color: white;
-    padding: 6px 15px;
+    background: #0a6568;
+    color: #fff !important;
+    padding: 2px 6px;
     display: flex;
     align-items: center;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700 !important;
+}
+
+.odds-header i.material-icons {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.odds-info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 11px !important;
+    font-weight: normal;
+    cursor: pointer;
 }
 
 .orange-badge {
@@ -161,42 +192,54 @@ body {
     margin-left: auto;
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 .odds-header-box {
-    width: 75px;
+    width: 80px;
     text-align: center;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 11px;
+    font-weight: 400 !important;
+    text-transform: uppercase;
 }
 
-.bg-back { background: #72bbef; color: white; padding: 4px; border-radius: 2px;}
-.bg-lay { background: #faa9ba; color: white; padding: 4px; border-radius: 2px;}
-.bg-fancy-no { background: #faa9ba; color: white; padding: 4px; border-radius: 2px;}
-.bg-fancy-yes { background: #72bbef; color: white; padding: 4px; border-radius: 2px;}
+.bg-back {
+    background: #72bbef;
+}
+
+.bg-lay {
+    background: #faa9ba;
+}
 
 .odds-row {
     display: flex;
     align-items: center;
-    border-top: 1px solid #eee;
+    border-bottom: 1px solid #7e7e7e;
     min-height: 48px;
 }
 
 .runner-name {
     flex: 1;
-    padding: 0 15px;
-    font-size: 12px;
+    padding: 8px 15px;
+    font-size: 13px;
     font-weight: 600;
     color: #333;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.runner-name .sub {
-    font-size: 10px;
-    color: #888;
+.profit-loss {
+    font-size: 12px;
+    font-weight: 800;
     margin-top: 2px;
+}
+
+.text-green {
+    color: #00B300;
+}
+
+.text-red {
+    color: #ff0000;
 }
 
 .odds-boxes-wrap {
@@ -205,16 +248,15 @@ body {
 }
 
 .odds-box {
-    width: 75px;
-    height: 48px;
+    width: 80px;
+    height: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid white;
-    border-bottom: 1px solid white;
+    border-left: 1px solid #ddd;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .odds-box .main-odd {
@@ -229,11 +271,11 @@ body {
 }
 
 .box-back {
-    background: #72bbef;
+    background: linear-gradient(0deg, #72bbef 0%, #a6d8f8 100%);
 }
 
 .box-lay {
-    background: #faa9ba;
+    background: linear-gradient(0deg, #faa9ba 0%, #fcced8 100%);
 }
 
 .box-no {
@@ -248,9 +290,11 @@ body {
     background: #111;
     color: white;
 }
+
 .box-suspended .sub-odd {
     color: #777;
 }
+
 .suspended-text-overlay {
     position: absolute;
     top: 0;
@@ -265,7 +309,8 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: rgba(0,0,0,0.1); /* Very subtle to make text readable */
+    background: rgba(0, 0, 0, 0.1);
+    /* Very subtle to make text readable */
     pointer-events: none;
 }
 
@@ -287,24 +332,24 @@ body {
 
 .search-input {
     flex: 1;
-    background: white !important;
-    border: 1px solid #ddd !important;
-    border-right: none !important;
-    padding: 8px 12px !important;
-    font-size: 12px !important;
-    outline: none !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+    font-size: 13px;
+    color: #000;
     height: 32px !important;
     box-sizing: border-box !important;
     margin: 0 !important;
     box-shadow: none !important;
 }
+
 .search-input:focus {
-    border: 1px solid #ddd !important;
+    border-bottom: 2px solid #0a6568 !important;
     box-shadow: none !important;
 }
 
 .search-btn {
-    background: #333;
+    background: #242424;
     color: white;
     border: none;
     padding: 0 15px;
@@ -312,14 +357,21 @@ body {
     font-weight: bold;
     cursor: pointer;
     height: 32px;
+    border-radius: 4px;
 }
 
 .matched-tabs {
     display: flex;
+    background: #011d1e;
+    height: 35px;
+    align-items: center;
 }
 
 .m-tab {
-    padding: 8px 15px;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
     font-size: 11px;
     font-weight: bold;
     color: white;
@@ -328,11 +380,19 @@ body {
 }
 
 .m-tab.active {
-    background: #0b4a4d;
+    background: #0a6568;
 }
 
 .m-tab:not(.active) {
     background: #011d1e;
+}
+
+.bet-row-lay {
+    background-color: #f8c9d4 !important;
+}
+
+.bet-row-back {
+    background-color: #c9e3f8 !important;
 }
 
 .side-table {
@@ -344,16 +404,19 @@ body {
 }
 
 .side-table th {
-    border-bottom: 2px solid #000;
+    background: #f5f5f5 !important;
+    color: #000;
     padding: 5px;
     text-align: left;
     font-weight: 700;
-    color: #000;
+    font-size: 11px;
 }
 
 .side-table td {
     padding: 5px;
     border-bottom: 1px solid #eee;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .table-title {
@@ -374,6 +437,7 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+
 .fancy-row-title i {
     font-size: 12px;
     color: #555;

@@ -1,258 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rules - Allexchbet</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Materialize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="deshboard.css" />
+    <link rel="stylesheet" href="reports.css">
     <style>
-      .rules-container {
-        background: white;
-        margin: 20px;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        max-height: 80vh;
-        overflow-y: auto;
-      }
-      .rule-section {
-        margin-bottom: 30px;
-      }
-      .rule-section h5 {
-        background-color: #f5f5f5;
-        color: var(--teal-primary);
-        font-size: 18px;
-        font-weight: bold;
-        padding: 10px 15px;
-        border-bottom: 2px solid var(--teal-primary);
-        text-transform: uppercase;
-        margin-top: 0;
-      }
-      .rule-item {
-        margin-bottom: 15px;
-        padding-left: 10px;
-        border-left: 2px solid #eee;
-      }
-      .rule-item strong {
-        display: block;
-        margin-bottom: 5px;
-        color: #333;
-      }
-      .rule-item p {
-        color: #666;
-        font-size: 14px;
-        margin: 0;
-      }
+        /* Page specific empty containers handled by reports.css or generic classes */
     </style>
-  </head>
-  <body>
-    <!-- Header Navigation -->
-        <header style="background: white; border-bottom: 2px solid #ccc;">
-      <!-- Row 1: Balances & Hamburger -->
-      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: bold; color: #000; padding: 5px 15px; position: relative;">
-          <div style="display: flex; align-items: center;">
-             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only" style="color: #000; margin-right: 10px; display: inline-flex;">
-                 <i class="material-icons">menu</i>
-             </a>
-             <div>BL : <span style="color: #4caf50;">5000</span></div>
-          </div>
-          <div style="position: absolute; left: 50%; transform: translateX(-50%);">PL : 37.2</div>
-      </div>
-      <!-- Row 2: Central Logo -->
-      <div style="text-align: center; padding: 5px 0;">
-          <img src="Assets/Logo/logo-text.png" alt="ALLEXCH" style="height: 20px;" />
-      </div>
-      <!-- Row 3: Marquee -->
-      <div style="background: #f8f8f8; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; overflow: hidden; height: 18px; line-height: 18px; display: flex;">
-          <div class="mercury-container" style="width: 100%; font-size: 10px; font-weight: bold; color: #000;">
-              <div id="mercury-ticker-text" class="mercury-ticker">CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER EVENT CLOSED ARE STRICTLY PROHIBITED.</div>
-          </div>
-      </div>
-    </header>
+</head>
+
+<body>
 
     <!-- Sidebar -->
     <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
-      <li class="logo-container center-align">
-        <img src="Assets/Deshboard/logo2.png" alt="Logo" />
-      </li>
-      <li>
-        <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" /> HOME</a>
-      </li>
-      <li>
-        <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI MARKET</a>
-      </li>
-      <li>
-        <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" /> MARKET ANALYSIS</a>
-      </li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">people</i> USERS LIST<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
-                <li><a href="user_list.html?role=super_master">SUPER MASTER</a></li>
-                <li><a href="user_list.html?role=master">MASTER</a></li>
-                <li><a href="user_list.html?role=client">CLIENT</a></li>
-                <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="collapsible-header waves-effect"><i class="material-icons white-text" style="font-size: 20px; margin-right: 15px">add_circle_outline</i> CREATE NEW<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
-                <li><a href="create_user.html?role=new_master">NEW MASTER</a></li>
-                <li><a href="create_user.html?role=new_client">NEW CLIENT</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a class="collapsible-header waves-effect"><img src="Assets/Deshboard/bets.svg" /> BETS<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
-                <li><a href="bets.html?status=casino_pending">CASINO1 PENDING</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="settlement.html" class="waves-effect waves-light"><img src="Assets/Deshboard/statement.svg" /> SETTLEMENT -NEW</a>
-      </li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect"><img src="Assets/Deshboard/profitloss.svg" /> REPORTS<i class="material-icons right white-text">arrow_drop_down</i></a>
-            <div class="collapsible-body">
-              <ul>
-                <li><a href="reports.html?type=profit_loss">PROFIT LOSS</a></li>
-                <li><a href="reports.html?type=ac_statement">A/C STATEMENT</a></li>
-                <li><a href="reports.html?type=chip_stmt_new">CHIP STMT NEW</a></li>
-                <li><a href="reports.html?type=chip_summery">CHIP SUMMERY</a></li>
-                <li><a href="reports.html?type=settl_report_new">SETTL. REPORT NEW</a></li>
-                <li><a href="reports.html?type=sport_summery">SPORT SUMMERY</a></li>
-                <li><a href="reports.html?type=top_clients">TOP CLINETS</a></li>
-                <li><a href="reports.html?type=week_report">WEEK-REPORT</a></li>
-                <li><a href="reports.html?type=balance_sheet">BALANCE SHEET</a></li>
-                <li><a href="reports.html?type=export">EXPORT</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD APK</a>
-      </li>
-      <li>
-        <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
-      </li>
-      <li>
-        <a href="rules.html" class="waves-effect active-nav"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
-      </li>
-      <li class="profile-bottom">
-        <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE (KINGTEST)</a>
-      </li>
-      <li>
-        <a href="change_password.html" class="waves-effect"><img src="Assets/Deshboard/edit.svg" /> CHANGE PASSWORD (KINGTEST)</a>
-      </li>
-      <li>
-        <a href="index.html" class="waves-effect logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
-      </li>
+        <li class="logo-container center-align">
+            <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+        </li>
+        <li id="dash_dashboard">
+            <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" />
+                HOME</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI
+                MARKET</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="market_analysis.html" class="waves-effect waves-light"><img
+                    src="Assets/Deshboard/profitloss.svg" />
+                MARKET ANALYSIS</a>
+        </li>
+        <li class="no-padding" id="dash_dashboard">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+                            src="https://allexchbet.com/allexchbet.com/images/users.svg">people</i>
+                        USERS LIST</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+                            <li>
+                                <a href="user_list.html?role=super_master">SUPER MASTER</a>
+                            </li>
+                            <li><a href="user_list.html?role=master">MASTER</a></li>
+                            <li><a href="user_list.html?role=client">CLIENT</a></li>
+                            <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+                            src="https://allexchbet.com/allexchbet.com/images/users.svg">
+                        CREATE NEW</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+                            <li>
+                                <a href="create_user.html?role=new_master">NEW MASTER</a>
+                            </li>
+                            <li>
+                                <a href="create_user.html?role=new_client">NEW CLIENT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/bets.svg" />
+                        BETS</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+                            <li>
+                                <a href="bets.html?status=casino_pending">CASINO1 PENDING</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="dash_dashboard">
+            <a href="settlement.html" class="waves-effect waves-light"><img class="menu-icon"
+                    src="https://allexchbet.com/allexchbet.com/images/chip-summery.svg"> SETTLEMENT
+                -NEW</a>
+        </li>
+        <li class="no-padding" id="dash_dashboard">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" />
+                        REPORTS</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="reports.html">PROFIT LOSS</a></li>
+                            <li><a href="ac_statement.html">A/C STATEMENT</a></li>
+                            <li><a href="chip_stmt_new.html">CHIP STMT NEW</a></li>
+                            <li><a href="chip_summery.html">CHIP SUMMERY</a></li>
+                            <li><a href="settl_report_new.html">SETTL. REPORT NEW</a></li>
+                            <li><a href="sport_summery.html">SPORT SUMMERY</a></li>
+                            <li><a href="top_clients.html">TOP CLINETS</a></li>
+                            <li><a href="weekly_report.html">WEEK-REPORT</a></li>
+                            <li><a href="balance_sheet.html">BALANCE SHEET</a></li>
+                            <li><a href="export.html">EXPORT</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="dash_dashboard">
+            <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" />
+                DOWNLOAD
+                APK</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="rules.html" class="waves-effect active-nav"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+        </li>
+        <li class="profile-bottom" id="dash_dashboard">
+            <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE
+                (KINGTEST)</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" />
+                CHANGE
+                PASSWORD (KINGTEST)</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="index.html" class="waves-effect logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+        </li>
     </ul>
 
     <!-- Main Content -->
-    <main>
-      <div
-        style="
-          background-color: var(--teal-primary);
-          color: white;
-          padding: 10px;
-          text-align: center;
-          font-weight: bold;
-          font-size: 16px;
-          text-transform: uppercase;
-        "
-      >
-        BETTING RULES
-      </div>
-
-      <div class="rules-container">
-        <div class="rule-section">
-          <h5>General Rules</h5>
-          <div class="rule-item">
-            <strong>1.1 Market Settlement</strong>
-            <p>
-              All markets are settled based on the official result of the
-              governing body of the respective sport/event.
-            </p>
-          </div>
-          <div class="rule-item">
-            <strong>1.2 Void Bets</strong>
-            <p>
-              If an event is cancelled or postponed for more than 48 hours, all
-              bets will be void unless a result has already been determined.
-            </p>
-          </div>
+    <div id="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar position-relative">
+            <div style="display: flex; align-items: center;">
+                <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"
+                    style="color: #000; margin-right: 10px; display: inline-flex;">
+                    <i class="material-icons">menu</i>
+                </a>
+                <div class="balance-info">BL : <span class="text-success">5000</span></div>
+            </div>
+            <div class="pl-info">PL : <span class="text-dark">37.20</span></div>
         </div>
 
-        <div class="rule-section">
-          <h5>Cricket Rules</h5>
-          <div class="rule-item">
-            <strong>2.1 Match Results</strong>
-            <p>
-              In the event of a tie where no "Super Over" or other tie-breaker
-              is played, Dead Heat rules apply.
-            </p>
-          </div>
-          <div class="rule-item">
-            <strong>2.2 Rain Rule (DLS)</strong>
-            <p>
-              Matches affected by rain will be settled according to the DLS
-              method result if the minimum required overs are completed.
-            </p>
-          </div>
+        <!-- Dynamic Title Section -->
+        <div class="page-title-box">
+            <h1 class="page-title">RULES</h1>
         </div>
 
-        <div class="rule-section">
-          <h5>Football Rules</h5>
-          <div class="rule-item">
-            <strong>3.1 90 Minute Rule</strong>
-            <p>
-              All bets are settled on the result at the end of 90 minutes of
-              play (including injury time) unless otherwise stated.
-            </p>
-          </div>
+        <!-- Marquee Ticker -->
+        <div class="ticker-marquee">
+            <p>CHEATING OF ANY KIND SUCH AS MARKET MANIPULATION, SNIPING, COURT-SIDING, COMMISSION ABUSE & BETS AFTER
+                EVENT CLOSED ARE NOT ALLOWED ON ANY SITE OPERATING ON THIS PLATFORM.</p>
         </div>
 
-        <div class="rule-section">
-          <h5>Casino Rules</h5>
-          <div class="rule-item">
-            <strong>4.1 Malfunction</strong>
-            <p>
-              A malfunction voids all pays and plays. In case of disconnection,
-              the hand will be played out by the system.
-            </p>
-          </div>
+        <!-- Rules Content -->
+        <div class="tc-container">
+            <div class="tc-box" style="min-height: 400px; background: transparent; border: none;">
+                <!-- Empty box matching the terms.html layout -->
+            </div>
         </div>
-      </div>
-    </main>
+    </div>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="deshboard.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+
 </html>
