@@ -6,50 +6,138 @@
     <title>A/C Statement - Allexchbet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="reports.css">
 </head>
 <body>
     <!-- Sidebar -->
-    <div id="sidebar">
-        <div class="sidebar-logo">
-            <img src="Assets/Deshboard/logo2.png" alt="Allexchbet">
-        </div>
-        <div class="nav-menu">
-            <a href="#" class="nav-item"><i class="fa fa-home"></i> HOME</a>
-            <a href="#" class="nav-item"><i class="fa fa-star"></i> MULTI MARKET</a>
-            <a href="#" class="nav-item"><i class="fa fa-chart-line"></i> MARKET ANALYSIS</a>
-            <a href="#" class="nav-item"><i class="fa fa-users"></i> USERS LIST</a>
-            <a href="#" class="nav-item"><i class="fa fa-plus-circle"></i> CREATE NEW</a>
-            <a href="#" class="nav-item"><i class="fa fa-dice"></i> BETS</a>
-            <a href="#" class="nav-item"><i class="fa fa-arrows-spin"></i> SETTLEMENT -NEW</a>
-            <a href="#reportsSubmenu" class="nav-item d-flex align-items-center" data-bs-toggle="collapse">
-                <i class="fa fa-chart-bar"></i> REPORTS <i class="fa fa-chevron-down ms-auto font-11"></i>
-            </a>
-            <div class="collapse show" id="reportsSubmenu">
-                <div class="submenu">
-                    <a href="reports.html" class="submenu-item">PROFIT LOSS</a>
-                    <a href="ac_statement.html" class="submenu-item active">A/C STATEMENT</a>
-                    <a href="chip_stmt_new.html" class="submenu-item">CHIP STMT NEW</a>
-                    <a href="chip_summery.html" class="submenu-item">CHIP SUMMERY</a>
-                    <a href="settl_report_new.html" class="submenu-item">SETTL. REPORT NEW</a>
-                    <a href="sport_summery.html" class="submenu-item">SPORT SUMMERY</a>
-                    <a href="top_clients.html" class="submenu-item">TOP CLINETS</a>
-                    <a href="weekly_report.html" class="submenu-item">WEEK-REPORT</a>
-                    <a href="balance_sheet.html" class="submenu-item">BALANCE SHEET</a>
-                    <a href="export.html" class="submenu-item">EXPORT</a>
-                </div>
-            </div>
-            <a href="#" class="nav-item"><i class="fa fa-mobile-screen"></i> DOWNLOAD APK</a>
-            <a href="#" class="nav-item"><i class="fa fa-file-lines"></i> T & C</a>
-            <a href="#" class="nav-item"><i class="fa fa-gavel"></i> RULES</a>
-            <a href="#" class="nav-item"><i class="fa fa-user-circle"></i> PROFILE (KINGTEST)</a>
-        </div>
-    </div>
+    <!-- Sidebar -->
+    <ul id="slide-out" class="sidenav sidenav-fixed dashboard-sidenav">
+        <li class="logo-container center-align">
+            <img src="Assets/Deshboard/logo2.png" alt="Logo" />
+        </li>
+        <li id="dash_dashboard">
+            <a href="deshboard.html" class="waves-effect waves-light"><img src="Assets/Deshboard/home.svg" />
+                HOME</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="multi_market.html" class="waves-effect waves-light"><img src="Assets/Deshboard/multi.svg" /> MULTI
+                MARKET</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="market_analysis.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profitloss.svg" />
+                MARKET ANALYSIS</a>
+        </li>
+        <li class="no-padding" id="dash_dashboard">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+                            src="https://allexchbet.com/allexchbet.com/images/users.svg">people</i>
+                        USERS LIST</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="user_list.html?role=my_child">MY CHILD</a></li>
+                            <li>
+                                <a href="user_list.html?role=super_master">SUPER MASTER</a>
+                            </li>
+                            <li><a href="user_list.html?role=master">MASTER</a></li>
+                            <li><a href="user_list.html?role=client">CLIENT</a></li>
+                            <li><a href="user_list.html?role=blocked">BLOCKED USERS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img class="menu-icon"
+                            src="https://allexchbet.com/allexchbet.com/images/users.svg">
+                        CREATE NEW</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="create_user.html?role=new_super">NEW SUPER</a></li>
+                            <li>
+                                <a href="create_user.html?role=new_master">NEW MASTER</a>
+                            </li>
+                            <li>
+                                <a href="create_user.html?role=new_client">NEW CLIENT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect waves-light"><img src="Assets/Deshboard/bets.svg" /> BETS</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="bets.html?status=unsettled">UNSETTLED</a></li>
+                            <li>
+                                <a href="bets.html?status=casino_pending">CASINO1 PENDING</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="dash_dashboard">
+            <a href="settlement.html" class="waves-effect waves-light"><img class="menu-icon"
+                    src="https://allexchbet.com/allexchbet.com/images/chip-summery.svg"> SETTLEMENT
+                -NEW</a>
+        </li>
+        <li class="no-padding" id="dash_dashboard">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect waves-light active-nav"><img src="Assets/Deshboard/profitloss.svg" />
+                        REPORTS</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="reports.html">PROFIT LOSS</a></li>
+                            <li><a href="ac_statement.html" class="active">A/C STATEMENT</a></li>
+                            <li><a href="chip_stmt_new.html">CHIP STMT NEW</a></li>
+                            <li><a href="chip_summery.html">CHIP SUMMERY</a></li>
+                            <li><a href="settl_report_new.html">SETTL. REPORT NEW</a></li>
+                            <li><a href="sport_summery.html">SPORT SUMMERY</a></li>
+                            <li><a href="top_clients.html">TOP CLINETS</a></li>
+                            <li><a href="weekly_report.html">WEEK-REPORT</a></li>
+                            <li><a href="balance_sheet.html">BALANCE SHEET</a></li>
+                            <li><a href="export.html">EXPORT</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="dash_dashboard">
+            <a href="download_apk.html" class="waves-effect waves-light"><img src="Assets/Deshboard/download.svg" /> DOWNLOAD
+                APK</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="terms.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> T & C</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="rules.html" class="waves-effect waves-light"><img src="Assets/Deshboard/terms.svg" /> RULES</a>
+        </li>
+        <li class="profile-bottom" id="dash_dashboard">
+            <a href="profile.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> PROFILE
+                (KINGTEST)</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="change_password.html" class="waves-effect waves-light"><img src="Assets/Deshboard/profile.svg" /> CHANGE
+                PASSWORD (KINGTEST)</a>
+        </li>
+        <li id="dash_dashboard">
+            <a href="index.html" class="waves-effect logout-btn"><img src="Assets/Deshboard/logout.svg" /> LOGOUT</a>
+        </li>
+    </ul>
 
     <!-- Main Content -->
     <div id="main-content">
         <div class="top-bar">
-            <div class="balance-info">BL : <span class="text-success">5000</span></div>
+            <div style="display: flex; align-items: center;">
+                <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only"
+                    style="color: #000; margin-right: 10px; display: inline-flex;">
+                    <i class="material-icons">menu</i>
+                </a>
+                <div class="balance-info">BL : <span class="text-success">5000</span></div>
+            </div>
             <div class="pl-info">PL : <span class="text-dark">37.20</span></div>
         </div>
         <div class="page-title-box">
@@ -105,6 +193,15 @@
             </table>
         </div>
     </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+        });
+    </script>
 </body>
 </html>
